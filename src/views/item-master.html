@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    POS- Item Master
+  </title>
+  <!-- Favicon -->
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/pos-dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/mystyle.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidenav-main">
+    
+  </nav>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+		<div class="col-xl-8 col-sm-5 col-md-5  pull-left p-left">
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-nonex d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0 p-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <div class="media-body ml-2 d-nonex d-lg-block">
+                  <i class="ni ni-circle-08"></i> <span class="mb-0 text-sm  font-weight-bold">User Name</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>My profile</span>
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-settings-gear-65"></i>
+                <span>Settings</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0);" class="dropdown-item logout_me">
+                <i class="ni ni-user-run"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+		</div>
+		<!-- Brand -->
+		<div class="col-xl-3 col-sm-6 col-md-6  pull-right text-right">
+		<!--Search Form -->
+        <form class="navbar-search navbar-search-dark form-inline mr-3x d-none d-md-flex ml-lg-auto inlineblock keyboard-input">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+				<span class="input-group-text"><i class="fas fa-search"></i></span>
+			  </div>
+			  <input class="form-control use-keyboard-input" placeholder="Search" type="text">
+            </div>
+          </div>
+        </form>
+		</div>
+		<div class="col-xl-1 col-sm-1 col-md-1 pull-right text-right">
+			<a href="manager.html" class="btn btn-sm btn-white">Exit</a>
+		</div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-4x pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+        <div class="col-xl-12 mb-2 mb-xl-0">
+	
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-10 col-sm-4 col-md-4">
+                  <h3 class="mb-0">Item Master</h3>
+                </div>
+				<!--<div class="col-xl-7 col-sm-6 col-md-6 text-right">
+				    <form class="navbar-search navbar-search-dark form-inline d-none d-md-flex ml-lg-auto keyboard-input nomargin">
+						<div class="form-group mb-0  search-on-whitebg">
+							<div class="input-group input-group-alternative">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-search"></i></span>
+								</div>
+								<input class="form-control use-keyboard-input" placeholder="Search" type="text">
+							</div>
+						</div>
+					</form>
+                </div>-->
+				<div class="col-xl-2 col-sm-2 col-md-2 text-right">
+					<a href="create-item.html" class="btn btn-sm btn-primary">Create Item</a>
+				</div>
+              </div>
+            </div>
+            <div class="table-responsive">
+			<div class="cart-holder tableContainer active-order-table">
+              <!-- Projects table -->
+              <table class="table align-items-center table-flush"  id="cart-container-id">
+                <thead class="thead-light">
+					<tr class="tablehead">
+						<th>Category</th>
+						<th>Item Name</th>
+						<th>Item Id</th>
+						<th>Barcode</th>
+						<th>Pickup Price</th>
+						<th>Delivery Price</th>
+						<th>Eat in Price</th>
+						<th>Cost Price</th>
+						<th>Stock</th>
+						<th>Min Stock</th>
+						<th>Photo</th>
+						<th>Publish/Unpublish</th>
+						<th>Description</th>
+						<th>Action</th>
+					</tr>
+                </thead>
+                <tbody>
+					<tr class="cart-header row-selected">
+						<td>Pizza</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<button class="btn btn-icon btn-primary btn-sm" type="button">
+								<span class="btn-inner--icon"><i class="fa fa-edit"></i></span>
+							</button>
+							<button class="btn btn-icon btn-danger btn-sm" type="button">
+								<span class="btn-inner--icon"><i class="fa fa-trash"></i></span>
+							</button>
+						</td>
+					</tr>
+					
+					  <tr class="cart-header">
+						<td>Pizza</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<button class="btn btn-icon btn-primary btn-sm" type="button">
+								<span class="btn-inner--icon"><i class="fa fa-edit"></i></span>
+							</button>
+							<button class="btn btn-icon btn-danger btn-sm" type="button">
+								<span class="btn-inner--icon"><i class="fa fa-trash"></i></span>
+							</button>
+						</td>
+					</tr>
+					</tbody>
+              </table>
+			  </div>
+            </div>
+			
+
+		  
+        </div>
+        </div> 
+		
+		
+		
+      </div>
+      <!-- Footer -->
+      <footer class="footer" id="app_footer">
+        
+      </footer>
+    </div>
+  </div>
+     
+
+
+ <!--create-deal-Modal START-->
+<div class="modal fade" id="create-deal-Modal" tabindex="-1" role="dialog" aria-labelledby="create-deal-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="create-deal-ModalLabel">Create Deal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+			<div class="col-xl-6 col-sm-6 col-md-6  pull-left nopadding  padding-right20">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Deal Name</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Total Value</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Deal Price</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Discount</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			
+			
+			
+		</form>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!---create-deal-END--> 
+<!-- Preperation time-  Modal -->
+<div class="modal fade" id="preperation-time-Modal" tabindex="-1" role="dialog" aria-labelledby="preperation-time-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="preperation-time-ModalLabel">Preperation Time</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="col-xl-6 pull-left nopadding  padding-right20">
+			<form>
+				<label for="DeliveryTime" class="form-control-label">Delivery Time</label>
+				<input  class="form-control" type="text" id="timePicker" placeholder="Preperation time">
+			</form>
+		</div>
+		<div class="col-xl-6 pull-left nopadding">
+			<form>
+				<label for="PickUpTime" class="form-control-label">Pick Up Time</label>
+				<input  class="form-control" type="text" id="timePicker-pickup" placeholder="Preperation time">
+			</form>
+		</div>
+      </div>
+	  <div class="modal-footer">
+            <a href="#.html" class="btn btn-success">Ok</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Preperation time- Modal end-->   
+ <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <!--   Core   -->
+  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/public.js"></script>
+  
+  <script>if (window.module) module = window.module;</script>
+
+</body>
+
+</html>

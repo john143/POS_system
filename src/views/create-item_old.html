@@ -1,0 +1,1441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    POS- Create Item
+  </title>
+  <!-- Favicon -->
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/pos-dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/mystyle.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidenav-main">
+    
+  </nav>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+		<div class="col pull-left p-left">
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-nonex d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0 p-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <div class="media-body ml-2 d-nonex d-lg-block">
+                  <i class="ni ni-circle-08"></i> <span class="mb-0 text-sm  font-weight-bold">User Name</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>My profile</span>
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-settings-gear-65"></i>
+                <span>Settings</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0);" class="dropdown-item logout_me">
+                <i class="ni ni-user-run"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+		</div>
+		<!-- Brand -->
+		<div class="col pull-right text-right">
+			<a href="manager.html" class="btn btn-sm btn-white">Exit</a>
+		</div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-4x pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+	  
+	    <div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-2">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-4  col-sm-4 col-md-4">
+                  <h3 class="mb-0">Create Item</h3>
+                </div>
+				<div class="col-xl-8 col-sm-8 col-md-8 text-right">
+					<a href="item-master.html" class="btn btn-sm btn-white">Go Back</a>
+					<a href="#" class="btn btn-sm btn-primary">Save</a>
+					<a href="item-master.html" class="btn btn-sm btn-danger">Cancel</a>
+				</div>
+              </div>
+            </div>
+		  </div>
+		</div>
+	  
+        <div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-0">
+
+			<div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-12">
+					<form>
+
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding  padding-right20">
+						<label for="select-category" class="form-control-label">Select Categories</label>
+							<a class="btn btn-outline-default btn-lg full-wth-btn collapse-for-address text-left" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Select Category <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+							<div class="collapse" id="collapseExample">
+								<div id="select-category-container">
+									<div class="rowx">
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Pizza</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Pasta</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Curry</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Pasta</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Burger</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Pizza</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Pasta</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Pasta</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-6 col-md-6 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">Pasta</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Item Code</label>
+								<input class="form-control" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Item Name</label>
+								<input class="form-control" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Publish/Unpublish</label>
+								<select class="form-control" id="exampleFormControlSelect1">
+								  <option>Publish</option>
+								  <option>Unpublish</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Pick up Price</label>
+								<input class="form-control" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Delivery Price</label>
+								<input class="form-control" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Eat-In Price</label>
+								<input class="form-control" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Cost Price</label>
+								<input class="form-control" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Stock</label>
+								<input class="form-control" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Min. Stock</label>
+								<input class="form-control" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Add Photo</label>
+								<div class="custom-file">
+									<input type="file" accept="image/*" class="custom-file-input" id="customFileLang" lang="en" onchange="getFilePath(event)">
+									<input type="hidden" class="temp_file_path" value="">
+									<label class="custom-file-label" for="customFileLang"></label>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Barcode</label>
+								<div class="input-group mb-3">
+								  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+								  <div class="input-group-append">
+									<button class="btn btn-outline-primary" type="button" id="button-addon2">Generate</button>
+								  </div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Description</label>
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="col-xl-8 col-sm-8 col-md-8">
+							<a href="#" class="btn btn-sm btn-primary save_item">Save</a>
+							<a href="item-master.html" class="btn btn-sm btn-danger">Cancel</a>
+						</div>
+			
+					</form>
+				
+			</div>	
+		</div>
+		  </div>
+        </div>
+        </div> 
+		
+		<div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-0">
+			<div class="card shadow">
+				<div class="card-header border-0 pt-2">
+				  <div class="row align-items-centerx">
+					<div class="pc-tab eatin-tab create-item-tab">
+						<input checked="checked" id="tab1" type="radio" name="pct" />
+						<input id="tab2" type="radio" name="pct" />
+						<input id="tab3" type="radio" name="pct" />
+						<input id="tab4" type="radio" name="pct" />
+						<input id="tab5" type="radio" name="pct" />
+						  <nav>
+							<ul>
+							  <li class="tab1">
+								<label for="tab1">Size/Base</label>
+							  </li>
+							  <li class="tab2">
+								<label for="tab2">Contains</label>
+							  </li>
+							  <li class="tab3">
+								<label for="tab3">Extra</label>
+							  </li>
+							  <li class="tab4">
+								<label for="tab4">Select any (1)</label>
+							  </li>
+							  <li class="tab5">
+								<label for="tab5">Specials</label>
+							  </li>
+							</ul>
+						  </nav>
+						  <section>
+							<div class="tabholder tab1">
+								<div class="table-responsive">
+									<div class="cart-holder tableContainer active-order-table">
+									  <!-- Projects table -->
+									  <table class="table align-items-center table-flush"  id="cart-container-id">
+										<thead class="thead-light">
+											<tr class="tablehead">
+												<th>Size</th>
+												<th>Base</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="cart-header">
+												<td>NS</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="ns-gfbun">
+													  <label class="custom-control-label" for="ns-gfbun">GF Bun</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="ns-nb">
+													  <label class="custom-control-label" for="ns-nb">NB</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="ns-med">
+													  <label class="custom-control-label" for="ns-med">Med</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="ns-thin">
+													  <label class="custom-control-label" for="ns-thin">Thin</label>
+													</div>
+												</td>
+											</tr>
+											<tr class="cart-header">
+												<td>Gluten Free</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="gluten-gfbun">
+													  <label class="custom-control-label" for="gluten-gfbun">GF Bun</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="gluten-nb">
+													  <label class="custom-control-label" for="gluten-nb">NB</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="gluten-med">
+													  <label class="custom-control-label" for="gluten-med">Med</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="gluten-thin">
+													  <label class="custom-control-label" for="gluten-thin">Thin</label>
+													</div>
+												</td>
+											</tr>
+											<tr class="cart-header">
+												<td>Large</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="large-gfbun">
+													  <label class="custom-control-label" for="large-gfbun">GF Bun</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="large-nb">
+													  <label class="custom-control-label" for="large-nb">NB</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="large-med">
+													  <label class="custom-control-label" for="large-med">Med</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="large-thin">
+													  <label class="custom-control-label" for="large-thin">Thin</label>
+													</div>
+												</td>
+											</tr>
+											<tr class="cart-header">
+												<td>Small</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="small-gfbun">
+													  <label class="custom-control-label" for="small-gfbun">GF Bun</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="small-nb">
+													  <label class="custom-control-label" for="small-nb">NB</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="small-med">
+													  <label class="custom-control-label" for="small-med">Med</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="small-thin">
+													  <label class="custom-control-label" for="small-thin">Thin</label>
+													</div>
+												</td>
+											</tr>
+											<tr class="cart-header">
+												<td>Fett</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="fett-gfbun">
+													  <label class="custom-control-label" for="fett-gfbun">GF Bun</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="fett-nb">
+													  <label class="custom-control-label" for="fett-nb">NB</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="fett-med">
+													  <label class="custom-control-label" for="fett-med">Med</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="fett-thin">
+													  <label class="custom-control-label" for="fett-thin">Thin</label>
+													</div>
+												</td>
+											</tr>	
+											<tr class="cart-header">
+												<td>Penne</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="penne-gfbun">
+													  <label class="custom-control-label" for="penne-gfbun">GF Bun</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="penne-nb">
+													  <label class="custom-control-label" for="penne-nb">NB</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="penne-med">
+													  <label class="custom-control-label" for="penne-med">Med</label>
+													</div>
+												</td>
+												<td>
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="penne-thin">
+													  <label class="custom-control-label" for="penne-thin">Thin</label>
+													</div>
+												</td>
+											</tr>		
+										</tbody>
+									  </table>
+									</div>
+								</div>
+							</div>
+
+							<div class="tabholder tab2">
+							
+								<div class="card-body p-0">
+								  <!-- List group -->
+								  <ul class="list-group list-group-flush" data-toggle="checklist">
+									<li class="checklist-entry list-group-item flex-column align-items-start py-2 px-4">
+									  <div class="checklist-item checklist-item-success checklist-item-checked">
+										<div class="checklist-info">
+										  <h5 class="checklist-title mb-0">Selected Toppings <a href="#" data-toggle="modal" data-target="#edit-selected-contains-Modal"><i class="fa fa-edit"></i>(Edit)</a></h5>
+										  <small>Chilli Flakes, BBq sauce, corn chips</small>
+										</div>
+									  </div>
+									</li>
+								  </ul>
+								</div>
+								<div class="divider clear"></div>
+								<div class="alphabet-wrap">
+									<a href="#" class="btn btn-outline-primary alpha-btn">A</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">B</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">C</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">D</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">E</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">F</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">G</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">H</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">I</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">J</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">K</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">L</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">M</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">N</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">O</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">P</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Q</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">R</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">S</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">T</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">U</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">V</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">W</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">X</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Y</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Z</a>
+									<a href="#" class="btn btn-grd-inverse alpha-btn all">All</a>
+								</div>
+								<div class="divider clear"></div>
+								<div id="extra-items-container">
+									<div class="row">
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">chilli flakes </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">bbq sauce </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">crispy </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">corn chips </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">garlic base  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">mexican salsa  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">broccoli  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">anchovies  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">basil pesto </span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabholder tab3">
+							
+								<div class="card-body p-0">
+								  <!-- List group -->
+								  <ul class="list-group list-group-flush" data-toggle="checklist">
+									<li class="checklist-entry list-group-item flex-column align-items-start py-2 px-4">
+									  <div class="checklist-item checklist-item-success checklist-item-checked">
+										<div class="checklist-info">
+										  <h5 class="checklist-title mb-0">Selected Extra Toppings <a href="#" data-toggle="modal" data-target="#edit-selected-extra-Modal"><i class="fa fa-edit"></i>(Edit)</a></h5>
+										  <small>Chilli Flakes, BBq sauce, corn chips</small>
+										</div>
+									  </div>
+									</li>
+								  </ul>
+								</div>
+								<div class="divider clear"></div>
+								<div class="alphabet-wrap">
+									<a href="#" class="btn btn-outline-primary alpha-btn">A</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">B</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">C</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">D</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">E</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">F</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">G</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">H</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">I</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">J</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">K</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">L</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">M</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">N</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">O</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">P</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Q</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">R</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">S</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">T</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">U</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">V</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">W</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">X</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Y</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Z</a>
+									<a href="#" class="btn btn-grd-inverse alpha-btn all">All</a>
+								</div>
+								<div class="divider clear"></div>
+								<div id="extra-items-container">
+									<div class="row">
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">chilli flakes </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">bbq sauce </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">crispy </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">corn chips </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">garlic base  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">mexican salsa  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">broccoli  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">anchovies  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">basil pesto </span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabholder tab4">
+							
+								<div class="card-body p-0">
+								  <!-- List group -->
+								  <a href="#" class="btn btn-sm btn-primary mb-2" data-toggle="modal" data-target="#add-new-to-selectany-Modal">Add New</a>
+								  <ul class="list-group list-group-flush" data-toggle="checklist">
+									<li class="checklist-entry list-group-item flex-column align-items-start py-2 px-4">
+									  <div class="checklist-item checklist-item-success checklist-item-checked">
+										<div class="checklist-info">
+										  <h5 class="checklist-title mb-0">Selected</h5>
+										  <small>Chilli Flakes, BBq sauce, corn chips</small>
+										</div>
+									  </div>
+									</li>
+								  </ul>
+								</div>
+							
+								
+							</div>
+							<div class="tabholder tab5">
+								<div class="card-body p-0">
+								  <!-- List group -->
+								  
+									<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding padding-right20">
+										<div class="form-group focused">
+											<label for="example-text-input" class="form-control-label">Discount by Percentage</label>
+											<input class="form-control" type="text" value="" placeholder="">
+										</div>
+									</div>
+									<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+										<div class="form-group focused">
+											<label for="example-text-input" class="form-control-label">Discount by Amount</label>
+											<input class="form-control" type="text" value="" placeholder="">
+										</div>
+									</div>
+									<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding padding-right20">
+										<div class="form-group focused">
+											<label for="example-text-input" class="form-control-label">Time from (optional)</label>
+											<input class="form-control" type="time">
+										</div>
+									</div>
+									<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+										<div class="form-group focused">
+											<label for="example-text-input" class="form-control-label">Time to (optional)</label>
+											<input class="form-control" type="time">
+										</div>
+									</div>
+									<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding padding-right20">
+										<div class="form-group focused">
+											<label for="example-text-input" class="form-control-label">Date from (optional)</label>
+											<input type="date" id="fromdate" class="form-control" name="date">
+										</div>
+									</div>
+									<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+										<div class="form-group focused">
+											<label for="example-text-input" class="form-control-label">Date to (optional)</label>
+											<input type="date" id="todate" class="form-control" name="date">
+										</div>
+									</div>
+									<div class="clear divider"></div>
+									<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+										<a href="#" class="btn btn-primary mb-2 pull-right">Save</a>
+									</div>
+									<div class="clear"></div>
+								</div>	
+								<div class="card shadow mt-3">
+            <div class="table-responsive">
+			<div class="cart-holder tableContainer sp-item-table-table">
+              <!-- Projects table -->
+              <table class="table align-items-center table-flush" id="create-sp-item-table">
+                <thead class="thead-light">
+					<tr class="tablehead">
+					  <th class="table-grid" style="text-align:left;">Days</th>
+					  <th>Pick up</th>
+					  <th>Delivery</th>
+					  <th>Eat In</th>
+					  <th>From(hh:mm)</th>
+					  <th>To(hh:mm)</th>
+					  <th>Status</th>
+					  <th>Date From</th>
+					  <th>Date To</th>
+					</tr>
+                </thead>
+                <tbody>
+				
+                <tr class="cart-header">
+                  <td style="text-align:left;">
+					<strong> Monday</strong> 
+				  </td>
+                  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>12:30 PM</td>
+				  <td>1:30 PM</td>
+                  <td>
+					<span class="badge badge-pill badge-danger badge-lg">inactive</span>
+				  </td>
+				  <td>20-7-2021</td>
+				  <td>22-7-2021</td>
+                </tr>
+				
+				<tr class="cart-header">
+                  <td style="text-align:left;">
+					<strong> Tuesday</strong> 
+				  </td>
+                  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>12:30 PM</td>
+				  <td>1:30 PM</td>
+                  <td>
+					<span class="badge badge-pill badge-success badge-lg">Active</span>
+				  </td>
+				  <td>20-7-2021</td>
+				  <td>22-7-2021</td>
+                </tr>
+				
+				<tr class="cart-header">
+                  <td style="text-align:left;">
+					<strong> Wednesday</strong>  
+				  </td>
+                  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>12:30 PM</td>
+				  <td>1:30 PM</td>
+                  <td>
+					<span class="badge badge-pill badge-danger badge-lg">inactive</span>
+				  </td>
+				  <td>20-7-2021</td>
+				  <td>22-7-2021</td>
+                </tr>
+				
+				<tr class="cart-header">
+                  <td style="text-align:left;">
+					<strong> Thursday</strong>  
+				  </td>
+                  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>12:30 PM</td>
+				  <td>1:30 PM</td>
+                  <td>
+					<span class="badge badge-pill badge-success badge-lg">Active</span>
+				  </td>
+				  <td>20-7-2021</td>
+				  <td>22-7-2021</td>
+                </tr>
+				
+				<tr class="cart-header">
+                  <td style="text-align:left;">
+					<strong> Friday</strong> 
+				  </td>
+                  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>12:30 PM</td>
+				  <td>1:30 PM</td>
+                  <td>
+					<span class="badge badge-pill badge-success badge-lg">Active</span>
+				  </td>
+				  <td>20-7-2021</td>
+				  <td>22-7-2021</td>
+                </tr> 
+				
+				<tr class="cart-header">
+                  <td style="text-align:left;">
+					<strong> Saturday</strong> 
+				  </td>
+                  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>12:30 PM</td>
+				  <td>1:30 PM</td>
+                  <td>
+					<span class="badge badge-pill badge-success badge-lg">Active</span>
+				  </td>
+				  <td>20-7-2021</td>
+				  <td>22-7-2021</td>
+                </tr>
+				
+				<tr class="cart-header">
+                  <td style="text-align:left;">
+					<strong>Sunday</strong> 
+				  </td>
+                  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>$10.00</td>
+				  <td>12:30 PM</td>
+				  <td>1:30 PM</td>
+                  <td>
+					<span class="badge badge-pill badge-success badge-lg">Active</span>
+				  </td>
+				  <td>20-7-2021</td>
+				  <td>22-7-2021</td>
+                </tr>
+				
+                </tbody>
+              </table>
+			  </div>
+            </div>
+
+          </div>
+							</div>
+						  </section>
+					</div>
+				  </div>
+				</div>
+			</div>			
+		</div>
+		
+      </div>
+      <!-- Footer -->
+      <footer class="footer" id="app_footer">
+        
+      </footer>
+    </div>
+  </div>
+     
+  
+<!--edit selected contains- START-->
+<div class="modal fade" id="edit-selected-contains-Modal" tabindex="-1" role="dialog" aria-labelledby="edit-selected-contains-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog width90percent-modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit-selected-contains-ModalLabel">Edit Selected</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+			<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding padding-right20 mb-2">
+					<div class="alphabet-wrap">
+						<a href="#" class="btn btn-outline-primary alpha-btn">A</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">B</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">C</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">D</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">E</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">F</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">G</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">H</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">I</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">J</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">K</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">L</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">M</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">N</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">O</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">P</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Q</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">R</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">S</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">T</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">U</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">V</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">W</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">X</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Y</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Z</a>
+						<a href="#" class="btn btn-grd-inverse alpha-btn all">All</a>
+					</div>
+					<div class="divider clear"></div>			
+			
+			
+			<div id="extra-items-container">
+									<div class="row">
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">chilli flakes </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">bbq sauce </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">crispy </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">corn chips </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">garlic base  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">mexican salsa  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">broccoli  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">anchovies  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">basil pesto </span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+			</div>
+
+		</form>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-success">Update</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!---edit selected contains---END--> 
+ <!--edit selected extra- START-->
+<div class="modal fade" id="edit-selected-extra-Modal" tabindex="-1" role="dialog" aria-labelledby="edit-selected-extra-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog width90percent-modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit-selected-extra-ModalLabel">Edit Selected</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+			<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding padding-right20 mb-2">
+					<div class="alphabet-wrap">
+						<a href="#" class="btn btn-outline-primary alpha-btn">A</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">B</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">C</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">D</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">E</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">F</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">G</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">H</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">I</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">J</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">K</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">L</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">M</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">N</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">O</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">P</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Q</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">R</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">S</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">T</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">U</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">V</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">W</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">X</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Y</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Z</a>
+						<a href="#" class="btn btn-grd-inverse alpha-btn all">All</a>
+					</div>
+					<div class="divider clear"></div>			
+			
+			
+			<div id="extra-items-container">
+									<div class="row">
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">chilli flakes </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">bbq sauce </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">crispy </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">corn chips </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">garlic base  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">mexican salsa  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">broccoli  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">anchovies  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">basil pesto </span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+			</div>
+
+		</form>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-success">Update</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!---edit selected extra---END--> 
+ <!--add-new-to-selectany- START-->
+<div class="modal fade" id="add-new-to-selectany-Modal" tabindex="-1" role="dialog" aria-labelledby="add-new-to-selectany-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog width800-modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="add-new-to-selectany-ModalLabel">Add More</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+			<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding padding-right20 mb-2">
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="mustCheck1">
+					<label class="custom-control-label" for="mustCheck1">Must</label>
+				</div>
+			</div>
+			<div class="divider clear"></div>
+			<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Item Name</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">How Many</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Order No.</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select>
+				</div>
+			</div>
+			
+			<div id="extra-items-container">
+									<div class="row">
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">chilli flakes </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">bbq sauce </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">crispy </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">corn chips </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">garlic base  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">mexican salsa  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">broccoli  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">anchovies  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-4 col-sm-4 col-md-4 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">basil pesto </span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+
+	
+		</form>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!---add-new-to-selectany---END-->
+ <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <!--   Core   -->
+  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+<script src="./js/public.js"></script>
+<script>
+//const { app } = require('electron');
+const getFilePath = (event) => {
+  /*const value = event.target.value;
+
+  // this will return C:\fakepath\somefile.ext
+  $('.temp_file_path').val(value);
+  console.log(value);
+
+  const files = event.target.files;
+  console.log(files);
+  console.log(files.FileList[0].File.path);*/
+
+  //this will return an ARRAY of File object
+  //console.log(files);
+   /*var reader = new FileReader();
+    reader.onload = function(){
+	  $('.temp_file_path').val(reader.result);
+	  console.log(reader);
+    };
+    reader.readAsDataURL(event.target.files[0]);*/
+	console.log($('#customFileLang').val());
+}
+
+$(document).ready(function(){
+	$('#customFileLang').change( function(event) {
+		var tmppath = URL.createObjectURL(event.target.files[0]);
+		$('.temp_file_path').val(event.target.files[0].path);
+		console.log(event.target.files[0].path);
+				
+	});
+
+	$('.save_item').on('click', function(){
+		var temp_file_path = $.trim($('.temp_file_path').val());
+		form_data = {};
+		var asset_path = ipcRenderer.sendSync('getapp', form_data);
+		if(asset_path){
+			var object = new ActiveXObject("Scripting.FileSystemObject");
+		   var file = object.GetFile(temp_file_path);
+		   file.Move(asset_path);
+		}
+		console.log(asset_path);
+	})
+})
+
+</script>
+
+
+<script>if (window.module) module = window.module;</script>
+
+</body>
+
+</html>

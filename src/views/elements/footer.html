@@ -1,0 +1,149 @@
+<div class="row align-items-center justify-content-xl-between">
+  <div class="col-xl-6">
+	<div class="copyright text-center text-xl-left text-muted">
+	  &copy; 2021 <a href="#" class="font-weight-bold ml-1">E-soft Technologies</a>
+	</div>
+  </div>
+  <div class="col-xl-6">
+	<ul class="nav nav-footer justify-content-center justify-content-xl-end">
+	  <li class="nav-item">
+		<a href="#" class="nav-link">About Us</a>
+	  </li>
+	  <li class="nav-item">
+		<a href="#" class="nav-link">Blog</a>
+	  </li>
+	</ul>
+  </div>
+</div>
+
+<!--Manager admin  Modal START-->
+<div class="modal fade" id="managerlogin-Modal" tabindex="-1" role="dialog" aria-labelledby="managerlogin-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered model-danger" role="document">
+    <div class="modal-content bg-gradient-danger">
+      <div class="modal-header">
+        <h5 class="modal-title" id="managerlogin-ModalLabel">Manager Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card-body px-lg-3 py-lg-3">
+                <div class="py-3 text-center manager-icon">
+                    <i class="ni ni-single-02 ni-3x"></i>
+                    <h4 class="heading mt-4">Login and go to manager</h4>
+                </div>
+              <form >
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Name" type="text">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Password" type="password">
+                  </div>
+                </div>
+                <div class="custom-control custom-control-alternative custom-checkbox">
+                  <input class="custom-control-input" id="customCheckLogin" type="checkbox">
+                  <label class="custom-control-label" for="customCheckLogin">
+                    <span class="text-white">Remember me</span>
+                  </label>
+                </div>
+                <div class="text-center">
+                  <a href="manager.html" class="btn btn-white my-4">Sign in</a>
+                </div>
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Manager admin END-->  
+
+ <!--create-deal-Modal START-->
+<div class="modal fade" id="create-deal-Modal" tabindex="-1" role="dialog" aria-labelledby="create-deal-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="create-deal-ModalLabel">Create Deal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+			<div class="col-xl-6 col-sm-6 col-md-6  pull-left nopadding  padding-right20">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Deal Name</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Total Value</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Deal Price</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Discount</label>
+					<input class="form-control" type="text" value="" placeholder="" >
+				</div>
+			</div>
+			
+			
+			
+		</form>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!---create-deal-END-->  
+<!-- Preperation time-  Modal -->
+<div class="modal fade" id="preperation-time-Modal" tabindex="-1" role="dialog" aria-labelledby="preperation-time-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="preperation-time-ModalLabel">Preperation Time</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="col-xl-6 pull-left nopadding  padding-right20">
+			<form>
+				<label for="DeliveryTime" class="form-control-label">Delivery Time</label>
+				<input  class="form-control" type="text" id="timePicker" placeholder="Preperation time">
+			</form>
+		</div>
+		<div class="col-xl-6 pull-left nopadding">
+			<form>
+				<label for="PickUpTime" class="form-control-label">Pick Up Time</label>
+				<input  class="form-control" type="text" id="timePicker-pickup" placeholder="Preperation time">
+			</form>
+		</div>
+      </div>
+	  <div class="modal-footer">
+            <a href="#.html" class="btn btn-success">Ok</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Preperation time- Modal end-->  

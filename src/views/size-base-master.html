@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    POS- Size Base Master
+  </title>
+  <!-- Favicon -->
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/pos-dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/mystyle.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidenav-main">
+    
+  </nav>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+		<div class="col-xl-8 col-sm-5 col-md-5  pull-left p-left">
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-nonex d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0 p-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <div class="media-body ml-2 d-nonex d-lg-block">
+                  <i class="ni ni-circle-08"></i> <span class="mb-0 text-sm  font-weight-bold">User Name</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>My profile</span>
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-settings-gear-65"></i>
+                <span>Settings</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0);" class="dropdown-item logout_me">
+                <i class="ni ni-user-run"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+		</div>
+		<!-- Brand -->
+		<div class="col-xl-3 col-sm-6 col-md-6  pull-right text-right">
+		<!--Search Form -->
+        <form class="navbar-search navbar-search-dark form-inline mr-3x d-none d-md-flex ml-lg-auto inlineblock keyboard-input">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+				<span class="input-group-text"><i class="fas fa-search"></i></span>
+			  </div>
+			  <input class="form-control use-keyboard-input" placeholder="Search" type="text">
+            </div>
+          </div>
+        </form>
+		</div>
+		<div class="col-xl-1 col-sm-1 col-md-1 pull-right text-right">
+			<a href="manager.html" class="btn btn-sm btn-white">Exit</a>
+		</div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-4x pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+	  
+	    <div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-2">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-4  col-sm-4 col-md-4">
+                  <h3 class="mb-0">Size Base Master</h3>
+                </div>
+				<div class="col-xl-8 col-sm-8 col-md-8 text-right">
+					<!--<a href="#" class="btn btn-sm btn-primary">Save</a>
+					<a href="item-master.html" class="btn btn-sm btn-danger">Cancel</a>-->
+				</div>
+              </div>
+            </div>
+		  </div>
+		</div>
+	  
+        <div class="col-xl-6 col-sm-12 col-md-12 mb-2 mb-xl-0">
+
+			<div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-12">
+					<form role="form" method="post" id="add_size_frm">
+
+						<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding mb-3">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Size Name</label>
+								<input type="text" name="size_name" class="form-control" placeholder="Size Name">
+								
+							</div>
+							
+						</div>
+						<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding text-left">
+							<button type="submit" class="btn btn-sm btn-primary add_size_btn">Save</button>
+							<a href="javascript:void(0);" class="btn btn-sm btn-danger reset_frm">Cancel</a>
+						</div>
+
+					</form>
+					
+					<div class="table-responsive mt-2">
+					<div class="cart-holder tableContainer active-order-table">
+					  <!-- Projects table -->
+					  <table class="table align-items-center table-flush"  id="cart-container-id">
+						<thead class="thead-light">
+							<tr class="tablehead">
+								<th>Size Id</th>
+								<th>Size Name</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody id="append_size_list">
+							
+						</tbody>
+					  </table>
+					  </div>
+					</div>
+				
+			</div>	
+		</div>
+		  </div>
+        </div>
+        </div> 
+		
+		<div class="col-xl-6 col-sm-12 col-md-12 mb-2 mb-xl-0">
+
+			<div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-12">
+					<form role="form" method="post" id="add_base_frm">
+
+						<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding mb-3">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Base Name</label>
+								<input type="text" name="base_name" class="form-control" placeholder="Size Name">
+								
+							</div>
+							
+						</div>
+						<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding text-left">
+							<button type="submit" class="btn btn-sm btn-primary add_base_btn">Save</button>
+							<a href="javascript:void(0);" class="btn btn-sm btn-danger reset_base_frm">Cancel</a>
+						</div>
+
+					</form>
+					
+					<div class="table-responsive mt-2">
+					<div class="cart-holder tableContainer active-order-table">
+					  <!-- Projects table -->
+					  <table class="table align-items-center table-flush"  id="cart-container-id">
+						<thead class="thead-light">
+							<tr class="tablehead">
+								<th>Base Id</th>
+								<th>Base Name</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody id="append_base_list">
+							
+						</tbody>
+					  </table>
+					  </div>
+					</div>
+				
+			</div>	
+		</div>
+		  </div>
+        </div>
+        </div>
+		
+      </div>
+      <!-- Footer -->
+      <footer class="footer" id="app_footer">
+        
+      </footer>
+    </div>
+  </div>
+     
+
+ <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <!--   Core   -->
+  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--   Optional JS   -->
+  <script src="./js/dev_plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="./js/dev_plugins/jquery-validation/additional-methods.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="./js/dev_plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="./js/public.js"></script>
+<script>
+ //const { ipcRenderer } = require('electron');
+
+
+    $(document).ready(function () {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 8000
+      });
+	  form_data = { 'route': 'sizeBase', 'action': 'getSizes' };
+      var size_list = ipcRenderer.sendSync('initRoute', form_data);
+	  //console.log('llllll : ' + JSON.stringify(size_list))
+	  var n = 1;
+	  var tbl_html = size_list.map(one_cat=>{
+			
+			if(one_cat.is_active == '1'){
+				var status_btn = 'btn-success';
+				var status_title = 'Active';
+			}else{
+				var status_btn = 'btn-default';
+				var status_title = 'Inactive';
+			}
+			var select_cls = '';
+			if(n % 2 != 0){
+				select_cls = 'row-selected';
+			}
+			if(one_cat.szname != 'NS'){
+				var result = '<tr class="cart-header '+select_cls+'"><td>'+one_cat.szid+'</td><td>'+one_cat.szname+'</td><td><button title="'+status_title+'" class="btn btn-icon '+status_btn+' btn-sm active_inactive" type="button" data-status="'+one_cat.is_active+'" data-unique="'+one_cat.szid+'"><span class="btn-inner--icon"><i class="fa fa-check-circle"></i></span></button></td></tr>';
+			}else{
+				var result = '<tr class="cart-header '+select_cls+'"><td>'+one_cat.szid+'</td><td>'+one_cat.szname+'</td><td></td></tr>';
+			}
+			n++;
+			return result;
+		})
+		$('#append_size_list').append(tbl_html);
+		$(document).on('click', '.active_inactive', function(){
+			var temp_status = $(this).data('status');
+			var temp_unique = $(this).data('unique');
+			form_data = { 'route': 'sizeBase', 'action':'sizeStatus', 'status':temp_status, unique:temp_unique };
+			var size_list = ipcRenderer.sendSync('initRoute', form_data);
+			if(size_list){
+				location.reload(true);
+			}
+		
+		})
+
+      $.validator.setDefaults({
+        submitHandler: function () {
+          
+          $('.add_size_btn').attr('disabled', true);
+          var form_data = [];
+		
+		  var size_name = $.trim($('[name="size_name"]').val());
+          form_data = { 'size_name':size_name, 'route': 'sizeBase', 'action': 'addSize' };
+          var status = ipcRenderer.sendSync('initRoute', form_data);
+          //console.log('Error : ' + JSON.stringify(status))
+          //return false;
+          if (status == '1') {
+			$("#add_size_frm").get(0).reset();
+			/*Toast.fire({
+              icon: 'success',
+              title: 'Category added successfully.'
+            })*/
+			location.reload(true);
+		  }else if(status == '2'){
+			Toast.fire({
+              icon: 'error',
+              title: 'This size is already in our database'
+            })
+          } else {
+            $('.add_cat_btn').attr('disabled', false);
+            Toast.fire({
+              icon: 'error',
+              title: 'We are getting some error. Please try after some time.'
+            })
+            return false;
+          }
+        }
+      });
+      $('#add_size_frm').validate({
+        rules: {
+			size_name: {
+            required: true,
+          }
+        },
+        messages: {
+		  size_name: {
+            required: "Enter size name",
+          }
+
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.input-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+	  
+	  /************************Base logic*****************************/
+	  
+	  form_data = { 'route': 'sizeBase', 'action': 'getBases' };
+      var base_list = ipcRenderer.sendSync('initRoute', form_data);
+	  //console.log('llllll : ' + JSON.stringify(base_list))
+	  var n = 1;
+	  var tbl_html_base = base_list.map(one_cat=>{
+			
+			if(one_cat.is_active == '1'){
+				var status_btn = 'btn-success';
+				var status_title = 'Active';
+			}else{
+				var status_btn = 'btn-default';
+				var status_title = 'Inactive';
+			}
+			var select_cls = '';
+			if(n % 2 != 0){
+				select_cls = 'row-selected';
+			}
+			if(one_cat.bname != 'NB'){
+				var result = '<tr class="cart-header '+select_cls+'"><td>'+one_cat.bid+'</td><td>'+one_cat.bname+'</td><td><button title="'+status_title+'" class="btn btn-icon '+status_btn+' btn-sm active_inactive_base" type="button" data-status="'+one_cat.is_active+'" data-unique="'+one_cat.bid+'"><span class="btn-inner--icon"><i class="fa fa-check-circle"></i></span></button></td></tr>';
+			}else{
+				var result = '<tr class="cart-header '+select_cls+'"><td>'+one_cat.bid+'</td><td>'+one_cat.bname+'</td><td></td></tr>';
+			}
+			n++;
+			return result;
+		})
+		$('#append_base_list').append(tbl_html_base);
+		$(document).on('click', '.active_inactive_base', function(){
+			var temp_status = $(this).data('status');
+			var temp_unique = $(this).data('unique');
+			form_data = { 'route': 'sizeBase', 'action':'baseStatus', 'status':temp_status, unique:temp_unique };
+			var size_list = ipcRenderer.sendSync('initRoute', form_data);
+			if(size_list){
+				location.reload(true);
+			}
+		
+		})
+
+      $.validator.setDefaults({
+        submitHandler: function () {
+          
+          $('.add_base_btn').attr('disabled', true);
+          var form_data = [];
+		
+		  var base_name = $.trim($('[name="base_name"]').val());
+          form_data = { 'base_name':base_name, 'route': 'sizeBase', 'action': 'addBase' };
+          var status = ipcRenderer.sendSync('initRoute', form_data);
+          //console.log('Error : ' + JSON.stringify(status))
+          //return false;
+          if (status == '1') {
+			$("#add_base_frm").get(0).reset();
+			/*Toast.fire({
+              icon: 'success',
+              title: 'Category added successfully.'
+            })*/
+			location.reload(true);
+		  }else if(status == '2'){
+			Toast.fire({
+              icon: 'error',
+              title: 'This base is already in our database'
+            })
+          } else {
+            $('.add_cat_btn').attr('disabled', false);
+            Toast.fire({
+              icon: 'error',
+              title: 'We are getting some error. Please try after some time.'
+            })
+            return false;
+          }
+        }
+      });
+      $('#add_base_frm').validate({
+        rules: {
+			size_name: {
+            required: true,
+          }
+        },
+        messages: {
+		  size_name: {
+            required: "Enter base name",
+          }
+
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.input-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+	  
+    });
+  
+ </script>
+<script>if (window.module) module = window.module;</script>
+</body>
+
+</html>

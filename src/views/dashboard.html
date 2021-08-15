@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    POS- Dashboard
+  </title>
+  <!-- Favicon -->
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="./assets/css/pos-dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/mystyle.css" rel="stylesheet" />
+
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidenav-main">
+    
+  </nav>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="dashboard.html">Company Name</a>
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="dashboard.html">Store Location</a>
+
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="media align-items-center">
+                <div class="media-body ml-2 d-none d-lg-block">
+                  <i class="ni ni-circle-08"></i> <span class="mb-0 text-sm  font-weight-bold">User Name</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>My profile</span>
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-settings-gear-65"></i>
+                <span>Settings</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0);" class="dropdown-item logout_me">
+                <i class="ni ni-user-run"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-4 pt-5 pt-md-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-3 col-sm-3 col-md-3">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="eat-in.html">
+                  <div class="card-body admin-card-btn">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                        <span class="h2 font-weight-bold mb-0">Eat In</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                          <i class="fa fa-utensil-spoon"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-3 col-md-3">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="#" data-toggle="modal" data-target="#pickup-Modal">
+                  <div class="card-body admin-card-btn">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                        <span class="h2 font-weight-bold mb-0">Pick up</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                          <i class="fas fa-shopping-bag"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-3 col-md-3">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="#" data-toggle="modal" data-target="#delivery-Modal">
+                  <div class="card-body admin-card-btn">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                        <span class="h2 font-weight-bold mb-0">Delivery</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                          <i class="fas fa-truck"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-3 col-md-3">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="#" data-toggle="modal" data-target="#counter-Modal">
+                  <div class="card-body admin-card-btn">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                        <span class="h2 font-weight-bold mb-0">Counter</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                          <i class="fas fa-walking"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+        <div class="col-xl-12 mb-5 mb-xl-0">
+
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col-xl-6 col-md-4 col-sm-6 text-left">
+                  <div class="form-group col-xl-5 col-md-12 col-sm-5 nopadding mb-0">
+                    <input type="date" id="filterdate" class="form-control" name="date">
+                  </div>
+                </div>
+                <div class="col-xl-6 col-md-8 col-sm-6 text-right">
+                  <a href="#!" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#quick-sale-Modal">
+                    <span class="btn-inner--icon"><i class="fa fa-percent"></i></span>
+                    <span class="btn-inner--text">Quick Sale</span>
+                  </a>
+                  <a href="#!" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#change-status-Modal">
+                    <span class="btn-inner--icon"><i class="fa fa-asterisk" aria-hidden="true"></i></span>
+                    <span class="btn-inner--text">Change Status</span>
+                  </a>
+                  <a href="#!" class="btn btn-sm btn-primary">
+                    <span class="btn-inner--icon"><i class="fa fa-print"></i></span>
+                    <span class="btn-inner--text">Print</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row">
+                <div class="col">
+                  <a href="#!" class="btn btn-sm btn-selected">Active Orders</a>
+                  <a href="#!" class="btn btn-sm btn-primary">All Orders</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Pickup</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Counter</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Delivery</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Eat In</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Web Orders</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Completed</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="table-responsive">
+              <div class="cart-holder tableContainer screen-height-table">
+                <!-- Projects table -->
+                <table class="table align-items-center table-flush" id="cart-container-id">
+                  <thead class="thead-light">
+                    <tr class="tablehead">
+                      <th>Order No.</th>
+                      <th>Phone</th>
+                      <th>Name</th>
+                      <th>Amount</th>
+                      <th>Order Type</th>
+                      <th>Payment Type</th>
+                      <th>Status</th>
+                      <th>User</th>
+                      <th>Register</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="cart-header row-selected">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-danger badge-lg">Pending</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>1</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Johney Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-success badge-lg">Completed</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>2</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-info badge-lg">Hold on</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>-</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-default badge-lg">Canceled</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>-</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-warning badge-lg">Active</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>-</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-danger badge-lg">Pending</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>-</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-info badge-lg">Hold on</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>-</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-default badge-lg">Canceled</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>-</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-warning badge-lg">Active</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>-</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="cart-header">
+                      <td>01</td>
+                      <td>123456789</td>
+                      <td>John Doe</td>
+                      <td>$100</td>
+                      <td>Eat in</td>
+                      <td>Cash</td>
+                      <td>
+                        <span class="badge badge-pill badge-danger badge-lg">Pending</span>
+                      </td>
+                      <td>User Name</td>
+                      <td>-</td>
+                      <td>
+                        <a href="order.html" class="btn btn-icon btn-primary btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="checkout.html" class="btn btn-icon btn-success btn-sm">
+                          <span class="btn-inner--icon"><i class="fa fa-dollar-sign" aria-hidden="true"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+            <div class="copyright text-center text-xl-left text-muted">
+              &copy; 2021 <a href="#" class="font-weight-bold ml-1" target="_blank">E-soft Technologies</a>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+              <li class="nav-item">
+                <a href="#" class="nav-link" target="_blank">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" target="_blank">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core   -->
+
+  <!-- Preperation time-  Modal -->
+  <div class="modal fade" id="preperation-time-Modal" tabindex="-1" role="dialog"
+    aria-labelledby="preperation-time-ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="preperation-time-ModalLabel">Preperation Time</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-xl-6 pull-left nopadding  padding-right20">
+            <form>
+              <label for="DeliveryTime" class="form-control-label">Delivery Time</label>
+              <input class="form-control" type="text" id="timePicker" placeholder="Preperation time">
+            </form>
+          </div>
+          <div class="col-xl-6 pull-left nopadding">
+            <form>
+              <label for="PickUpTime" class="form-control-label">Pick Up Time</label>
+              <input class="form-control" type="text" id="timePicker-pickup" placeholder="Preperation time">
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#.html" class="btn btn-success">Ok</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Preperation time- Modal end-->
+  <!--Manager admin  Modal START-->
+  <div class="modal fade" id="managerlogin-Modal" tabindex="-1" role="dialog" aria-labelledby="managerlogin-ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered model-danger" role="document">
+      <div class="modal-content bg-gradient-danger">
+        <div class="modal-header">
+          <h5 class="modal-title" id="managerlogin-ModalLabel">Manager Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card-body px-lg-3 py-lg-3">
+            <div class="py-3 text-center manager-icon">
+              <i class="ni ni-single-02 ni-3x"></i>
+              <h4 class="heading mt-4">Login and go to manager</h4>
+            </div>
+            <form>
+              <div class="form-group mb-3">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Name" type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Password" type="password">
+                </div>
+              </div>
+              <div class="custom-control custom-control-alternative custom-checkbox">
+                <input class="custom-control-input" id="customCheckLogin" type="checkbox">
+                <label class="custom-control-label" for="customCheckLogin">
+                  <span class="text-white">Remember me</span>
+                </label>
+              </div>
+              <div class="text-center">
+                <a href="manager.html" class="btn btn-white my-4">Sign in</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Manager admin END-->
+  <!-- quick-sale- Modal -->
+  <div class="modal fade" id="quick-sale-Modal" tabindex="-1" role="dialog" aria-labelledby="quick-sale-ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quick-sale-ModalLabel">Quick sale</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-xl-12 pull-left nopadding">
+            <div class="form-group focused">
+              <label for="example-text-input" class="form-control-label">Price</label>
+              <input class="form-control" type="text" value="" placeholder="$" id="price">
+            </div>
+          </div>
+          <div class="col-xl-12 pull-left nopadding">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1" class="form-control-label">Notes</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="checkout.html" class="btn btn-success">Pay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- quick-sale-  Modal end-->
+
+  <!-- change-status-Modal Modal -->
+  <div class="modal fade" id="change-status-Modal" tabindex="-1" role="dialog"
+    aria-labelledby="change-status-ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="change-status-ModalLabel">Change Status</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-xl-12 pull-left nopadding">
+            <div class="btn-group btn-group-toggle select-any-one-btn" data-toggle="buttons">
+              <label class="btn btn-disable">
+                <input type="radio" id="option1" autocomplete="off" checked=""> Active
+              </label>
+              <label class="btn btn-disable">
+                <input type="radio" id="option2" autocomplete="off"> Cancelled
+              </label>
+              <label class="btn btn-disable">
+                <input type="radio" id="option3" autocomplete="off"> Completed
+              </label>
+              <label class="btn btn-disable">
+                <input type="radio" id="option4" autocomplete="off"> Pending
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-success">Ok</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- quick-sale-  Modal end-->
+  <!-- Price check-  Modal -->
+  <div class="modal fade" id="price-check-Modal" tabindex="-1" role="dialog" aria-labelledby="price-check-ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="price-check-ModalLabel">Price check</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-xl-12 pull-left nopadding">
+            <div class="custom-control custom-checkbox mb-2">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Pick Up</label>
+            </div>
+            <div class="custom-control custom-checkbox mb-2">
+              <input type="checkbox" class="custom-control-input" id="customCheck2">
+              <label class="custom-control-label" for="customCheck2">Delivery</label>
+            </div>
+            <div class="custom-control custom-checkbox mb-2">
+              <input type="checkbox" class="custom-control-input" id="customCheck3">
+              <label class="custom-control-label" for="customCheck3">Eat in</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="refund.html" class="btn btn-success">Submit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Price check- Modal end-->
+
+  <!-- Pick up- Modal -->
+  <div class="modal fade" id="pickup-Modal" tabindex="-1" role="dialog" aria-labelledby="pickup-ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog width800-modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pickup-ModalLabel">Details for Pick up Order</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-xl-6 col-sm-6 col-md-6 pull-left">
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Phone Number</label>
+                <input class="form-control mandatery-field" type="tel" value="" placeholder="" required>
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Name</label>
+                <input class="form-control mandatery-field" type="text" value="" placeholder="" required>
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="exampleFormControlInput1" class="form-control-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="exampleFormControlInput1" class="form-control-label">Loyalty Card No.</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-sm-6 col-md-6 pull-left">
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Address Line 1</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Address Line 2</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Suburb</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="form-control-label">State</label>
+                <select class="form-control">
+                  <option>State</option>
+                  <option>Default select</option>
+                  <option>Default select</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xl-12 col-sm-12 col-md-12 pull-left">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1" class="form-control-label">Notes</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="pickup.html" class="btn btn-success">Start Order</a>
+          <a href="dashboard.html" class="btn btn-white">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pick up- Modal end-->
+  <!-- Delivery- Modal -->
+  <div class="modal fade" id="delivery-Modal" tabindex="-1" role="dialog" aria-labelledby="delivery-ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog width800-modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="delivery-ModalLabel">Delivery Customer Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-xl-6 col-sm-6 col-md-6 pull-left">
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Phone Number</label>
+                <input class="form-control mandatery-field" type="tel" value="" placeholder="" required>
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Name</label>
+                <input class="form-control mandatery-field" type="text" value="" placeholder="" required>
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="exampleFormControlInput1" class="form-control-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="exampleFormControlInput1" class="form-control-label">Loyalty Card No.</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-12 pull-left nopadding">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="form-control-label">Notes</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-sm-6 col-md-6 pull-left">
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Address Line 1</label>
+                <input class="form-control mandatery-field" type="text" value="" placeholder="" required>
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Address Line 2</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Suburb</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="form-control-label">State</label>
+                <select class="form-control">
+                  <option>State</option>
+                  <option>Default select</option>
+                  <option>Default select</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Delivery Charges</label>
+                <input class="form-control" type="text" value="Readonly" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="delivery.html" class="btn btn-success">Start Order</a>
+          <a href="dashboard.html" class="btn btn-white">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Delivery- Modal end-->
+  <!-- counter/walkin- Modal -->
+  <div class="modal fade" id="counter-Modal" tabindex="-1" role="dialog" aria-labelledby="counter-ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog width800-modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="counter-ModalLabel">Walk-In Customer Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-xl-6 col-sm-6 col-md-6 pull-left">
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Phone Number</label>
+                <input class="form-control" type="tel" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Name</label>
+                <input class="form-control mandatery-field" type="text" value="" placeholder="" required>
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="exampleFormControlInput1" class="form-control-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="exampleFormControlInput1" class="form-control-label">Loyalty Card No.</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-12 pull-left nopadding">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="form-control-label">Notes</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-sm-6 col-md-6 pull-left">
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Address Line 1</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Address Line 2</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Suburb</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+            <div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding padding-right20">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="form-control-label">State</label>
+                <select class="form-control">
+                  <option>State</option>
+                  <option>Default select</option>
+                  <option>Default select</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
+              <div class="form-group focused">
+                <label for="example-text-input" class="form-control-label">Post Code</label>
+                <input class="form-control" type="text" value="" placeholder="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="counter.html" class="btn btn-success">Start Order</a>
+          <a href="dashboard.html" class="btn btn-white">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- counter/walkin- Modal end-->
+  <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--   Optional JS   -->
+  <script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="./assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
+  <script src="./js/public.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
+  </script>
+  <!-- Custom js for Digital clock -->
+  <script type="text/javascript">
+    function showTime() {
+      var date = new Date();
+      var h = date.getHours(); // 0 - 23
+      var m = date.getMinutes(); // 0 - 59
+      var s = date.getSeconds(); // 0 - 59
+      var session = "AM";
+
+      if (h == 0) {
+        h = 12;
+      }
+
+      if (h > 12) {
+        h = h - 12;
+        session = "PM";
+      }
+
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+
+      var time = h + ":" + m + ":" + s + " " + session;
+      document.getElementById("MyClockDisplay").innerText = time;
+      document.getElementById("MyClockDisplay").textContent = time;
+
+      setTimeout(showTime, 1000);
+
+    }
+
+    showTime();
+  </script>
+  <script>
+    var myDate = new Date();
+    var myMonths = ["January ", "February ", "March ", "April ", "May ", "June ", "July ", "August ", "September ", "October ", "November ", "December "];
+    document.getElementById("display-date").innerHTML = myMonths[myDate.getMonth()] + myDate.getDate() + "th, " + myDate.getFullYear();
+  </script>
+  <script>
+    function timePicker(id) {
+      var input = document.getElementById(id);
+      var timePicker = document.createElement('div');
+      timePicker.classList.add('time-picker');
+      input.value = '08:30';
+
+      //open timepicker
+      input.onclick = function () {
+        timePicker.classList.toggle('open');
+
+        this.setAttribute('disabled', 'disabled');
+        timePicker.innerHTML += `
+      <div class="set-time">
+         <div class="label">
+            <a id="plusH" >+</a>
+            <input class="set" type="text" id="hour" value="08">
+            <a id="minusH">-</a>
+         </div>
+         <div class="label">
+            <a id="plusM">+</a>
+            <input class="set" type="text" id="minute" value="30">
+            <a id="minusM">-</a>
+         </div>
+      </div>
+      <div id="submitTime">Set time</div>`;
+        this.after(timePicker);
+        var plusH = document.getElementById('plusH');
+        var minusH = document.getElementById('minusH');
+        var plusM = document.getElementById('plusM');
+        var minusM = document.getElementById('minusM');
+        var h = parseInt(document.getElementById('hour').value);
+        var m = parseInt(document.getElementById('minute').value);
+        //increment hour
+        plusH.onclick = function () {
+          h = isNaN(h) ? 0 : h;
+          if (h === 23) {
+            h = -1;
+          }
+          h++;
+          document.getElementById('hour').value = (h < 10 ? '0' : 0) + h;
+        }
+        //decrement hour
+        minusH.onclick = function () {
+          h = isNaN(h) ? 0 : h;
+          if (h === 0) {
+            h = 24;
+          }
+          h--;
+          document.getElementById('hour').value = (h < 10 ? '0' : 0) + h;
+        }
+        //increment hour
+        plusM.onclick = function () {
+          m = isNaN(m) ? 0 : m;
+          if (m === 45) {
+            m = -15;
+          }
+          m = m + 15;
+          document.getElementById('minute').value = (m < 10 ? '0' : 0) + m;
+        }
+        //decrement hour
+        minusM.onclick = function () {
+          m = isNaN(m) ? 0 : m;
+          if (m === 0) {
+            m = 60;
+          }
+          m = m - 15;
+          document.getElementById('minute').value = (m < 10 ? '0' : 0) + m;
+        }
+
+        //submit timepicker
+        var submit = document.getElementById("submitTime");
+        submit.onclick = function () {
+          input.value = document.getElementById('hour').value + ':' + document.getElementById('minute').value;
+          input.removeAttribute('disabled');
+          timePicker.classList.toggle('open');
+          timePicker.innerHTML = '';
+        }
+      }
+    }
+
+    timePicker('timePicker');
+
+
+  </script>
+
+  <script>
+    function timePicker-pickup(id){
+      var input = document.getElementById(id);
+      var timePicker-pickup = document.createElement('div');
+      timePicker - pickup.classList.add('time-picker');
+      input.value = '08:30';
+
+      //open timepicker
+      input.onclick = function () {
+        timePicker - pickup.classList.toggle('open');
+
+        this.setAttribute('disabled', 'disabled');
+        timePicker - pickup.innerHTML +=`
+      <div class="set-time">
+         <div class="label">
+            <a id="plusH" >+</a>
+            <input class="set" type="text" id="hour" value="08">
+            <a id="minusH">-</a>
+         </div>
+         <div class="label">
+            <a id="plusM">+</a>
+            <input class="set" type="text" id="minute" value="30">
+            <a id="minusM">-</a>
+         </div>
+      </div>
+      <div id="submitTime">Set time</div>`;
+        this.after(timePicker - pickup);
+        var plusH = document.getElementById('plusH');
+        var minusH = document.getElementById('minusH');
+        var plusM = document.getElementById('plusM');
+        var minusM = document.getElementById('minusM');
+        var h = parseInt(document.getElementById('hour').value);
+        var m = parseInt(document.getElementById('minute').value);
+        //increment hour
+        plusH.onclick = function () {
+          h = isNaN(h) ? 0 : h;
+          if (h === 23) {
+            h = -1;
+          }
+          h++;
+          document.getElementById('hour').value = (h < 10 ? '0' : 0) + h;
+        }
+        //decrement hour
+        minusH.onclick = function () {
+          h = isNaN(h) ? 0 : h;
+          if (h === 0) {
+            h = 24;
+          }
+          h--;
+          document.getElementById('hour').value = (h < 10 ? '0' : 0) + h;
+        }
+        //increment hour
+        plusM.onclick = function () {
+          m = isNaN(m) ? 0 : m;
+          if (m === 45) {
+            m = -15;
+          }
+          m = m + 15;
+          document.getElementById('minute').value = (m < 10 ? '0' : 0) + m;
+        }
+        //decrement hour
+        minusM.onclick = function () {
+          m = isNaN(m) ? 0 : m;
+          if (m === 0) {
+            m = 60;
+          }
+          m = m - 15;
+          document.getElementById('minute').value = (m < 10 ? '0' : 0) + m;
+        }
+
+        //submit timepicker
+        var submit = document.getElementById("submitTime");
+        submit.onclick = function () {
+          input.value = document.getElementById('hour').value + ':' + document.getElementById('minute').value;
+          input.removeAttribute('disabled');
+          timePicker - pickup.classList.toggle('open');
+          timePicker - pickup.innerHTML = '';
+        }
+      }
+    }
+
+    timePicker('timePicker-pickup');
+  </script>
+  <script>if (window.module) module = window.module;</script>
+</body>
+
+</html>

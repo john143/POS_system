@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>R S Live TV</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <style>
+	.alert {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.alert .glyphicon {
+		margin-right: 8px;
+		align-self: center; // if you want it centered vertically
+	}
+  </style>
+</head>
+<body class="hold-transition register-page">
+<div class="text-center">
+	<ul>
+		<li class="nav-item d-none d-sm-inline-block text-danger ml-4">
+			For Help
+		  </li>
+		<li class="nav-item d-none d-sm-inline-block ml-4">
+        <i class="fas fa-phone" aria-hidden="true"></i> Phone:
+			<a href="javascript:void(0);">9999981919</a>
+      </li>
+	  <li class="nav-item d-none d-sm-inline-block ml-4">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> Whatsapp:
+		<a href="javascript:void(0);">9999981919</a>
+      </li>
+	  <!--<li class="nav-item d-none d-sm-inline-block ml-4">
+        <i class="fas fa-envelope" aria-hidden="true"></i> Mail:
+		<a href="mailto:helpdesk@forumias.academy">test@gmail.com</a>
+      </li>-->
+	</ul>
+	</div>
+
+
+<div class="register-box">
+	
+
+	<div class="alert alert-warning internet_err" role="alert" style="display:none;">
+	  <i class="fas fa-exclamation-triangle mr-3 align-self-center"></i>
+	  Please check your internet connection
+	</div>
+  <div class="register-logo">
+    <a href="javascript:void(0);"><b>R S </b>Live TV</a>
+  </div>
+
+  <div class="card">
+    <div class="card-body register-card-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+	  
+      <form action="#" method="post" id="login_user">
+        
+		<div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="User Id" name="phone">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+		
+        <div class="input-group mb-3">
+          <input type="password" id="password" class="form-control" placeholder="Password" name="password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <!--<div class="col-8">
+            <div class="icheck-primary input-group">
+              <input type="checkbox" id="agreeTerms" name="terms">
+              <label for="agreeTerms">
+               Remember me
+              </label>
+            </div>
+          </div>-->
+          <!-- /.col -->
+		  
+          <div class="col-4">
+			
+            <button type="submit" class="btn btn-primary btn-block login_btn">Login</button>
+          </div>
+		  <div class="col-4">
+			<div class="auto_loader mx-auto" style="display:none;">
+				<img class="img-responsive text-center" style="height:50px" src="../../assets/img/loader.gif">
+			</div>
+		  </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <!--<a href="login.html" class="text-center">I already have a membership</a>-->
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- jquery-validation -->
+<script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../plugins/jquery-validation/additional-methods.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="../plugins/sweetalert2/sweetalert2.min.js"></script>
+<script>
+const {ipcRenderer} = require('electron');
+ 
+ 
+ $(document).ready(function () {
+ const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 5000
+    });
+
+
+setInterval(function(){ 
+	if(!navigator.onLine) {
+		$('.internet_err').show();
+	}else{
+		$('.internet_err').hide();
+	}
+}, 1000);
+ 
+  $.validator.setDefaults({
+    submitHandler: function () {
+		if(!navigator.onLine) {
+			Toast.fire({
+			icon: 'error',
+			title: 'Please check your internet connection'
+		  })
+		  return false;
+		}
+		$('.login_btn').attr('disabled', true);
+		var form_data 		= [];
+		
+		var phone 			= 		$.trim($('[name="phone"]').val());
+		var password 		= 		$.trim($('[name="password"]').val());
+		form_data = {'phone':phone, 'password':password,'route':'users', 'action':'loginUser'};
+		var status = ipcRenderer.sendSync('initRoute', form_data);
+		if(status == 'done'){
+			
+			console.log(status)
+			window.location.href = '../index.html';
+		}else if( status== 'error'){
+			$.ajax({
+				url: 'http://rslivetv.com/api/login',
+				type:'get',
+				beforeSend:function(){
+					$('.auto_loader').show();
+				},
+				data:{userid:phone,password:password, device_id:'123'},
+				success:function(resp){
+				
+					if(resp.data){
+						var form_data 		= [];
+						form_data = {'data':resp.data,'route':'users', 'action':'checkUser'};
+						var check_user = ipcRenderer.sendSync('initRoute', form_data);
+						console.log('bbbnnnn: '+JSON.stringify(check_user));
+						if(check_user == 1){
+							window.location.href = '../index.html';
+						}else{
+							Toast.fire({
+								icon: 'error',
+								title: 'We are getting some error. Please try after some time.'
+							  })
+						}
+						//console.log('gggg: '+JSON.stringify(resp));
+						//window.location.href = '../index.html';
+					}else{
+						if(resp.message){
+							Toast.fire({
+							icon: 'error',
+							title: resp.message
+						  })
+						}else{
+							Toast.fire({
+							icon: 'error',
+							title: 'Please enter correct user id and password.'
+						  })
+						}
+						
+						$('.login_btn').attr('disabled', false);
+						$('.auto_loader').hide();
+						return false;
+					}
+					
+				}
+			})
+			
+		}else{
+			$('.login_btn').attr('disabled', false);
+			Toast.fire({
+				icon: 'error',
+				title: 'We are getting some error. Please try after some time.'
+			  })
+			return false;
+		}
+    }
+  });
+  $('#login_user').validate({
+    rules: {
+		  phone: {
+			required: true,
+		  },
+		  
+		  password: {
+			required: true,
+		  },
+    },
+    messages: {
+	  
+	  phone: {
+        required: "Please enter user id",
+      },
+	  
+      password: {
+        required: "Please enter password",
+        minlength: "Your password must be at least 5 characters long"
+      }
+	  
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.input-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>
+<script>if (window.module) module = window.module;</script>
+</body>
+</html>

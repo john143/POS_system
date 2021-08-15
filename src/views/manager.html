@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    POS- Manager
+  </title>
+  <!-- Favicon -->
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link href="./assets/css/pos-dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/mystyle.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidenav-main">
+    
+  </nav>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-nonex d-lg-inline-block" href="javascript:void(0);">Company Name</a>
+		<a class="h4 mb-0 text-white text-uppercase d-nonex d-lg-inline-block" href="javascript:void(0);">Store Location</a>
+
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-nonex d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <div class="media-body ml-2 d-nonex d-lg-block">
+                  <i class="ni ni-circle-08"></i> <span class="mb-0 text-sm  font-weight-bold">User Name</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#" class="dropdown-item">
+              <i class="ni ni-single-02"></i>
+              <span>My profile</span>
+            </a>
+            <a href="#" class="dropdown-item">
+              <i class="ni ni-settings-gear-65"></i>
+              <span>Settings</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="javascript:void(0);" class="dropdown-item logout_me">
+              <i class="ni ni-user-run"></i>
+              <span>Logout</span>
+            </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-4 pt-5 pt-md-6">
+      <div class="container-fluid mt-5x">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+			  <a class="btn btn-white text-left" href="refund.html">
+                <div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Refund</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-hand-holding-usd"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="cancel.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Cancel</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="far fa-window-close"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+			  <a class="btn btn-white text-left" href="customers.html">
+                <div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Customers</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="suburbs.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Suburbs</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-map-marked-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="drawer.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Cash Drawer</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-dollar-sign"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="expenses.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Expenses</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-money-check-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="report.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Reports</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="far fa-file-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="employee.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Staff</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-user-tie"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="category-master.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Category Master</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-boxes"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="item-master.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Item Master</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-clipboard-list"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="deal-master.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Deal Master</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-tag"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <a class="btn btn-white text-left" href="size-base-master.html">
+				<div class="card-body admin-card-btn">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                      <span class="h2 font-weight-bold mb-0">Size/Base</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fa fa-cubes" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				</a>
+              </div>
+            </div>
+			<div class="col-xl-3 col-sm-4 col-md-4 mb-4">
+            <div class="card card-stats mb-4 mb-xl-0"> <a class="btn btn-white text-left" href="topping-master.html">
+              <div class="card-body admin-card-btn">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">View</h5>
+                    <span class="h2 font-weight-bold mb-0">Topping Master</span> </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow"> <i class="fa fa-leaf" aria-hidden="true"></i> </div>
+                  </div>
+                </div>
+              </div>
+              </a> </div>
+          </div>
+			
+			
+			
+          </div>
+        </div>
+      </div>
+    </div>
+  
+ <div class="container-fluid mt-3" >     
+      <!-- Footer -->
+      <footer class="footer" id="app_footer">
+        
+      </footer>
+	  </div>
+    </div>
+
+      
+
+<!-- Preperation time- Modal end-->  
+<script>if (typeof module === 'object') { window.module = module; module = undefined; }</script> 
+  <!--   Core   -->
+  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="./js/public.js"></script>
+	
+  <script>
+	$(document).ready(function() {
+				$('.minus').click(function () {
+					var $input = $(this).parent().find('input');
+					var count = parseInt($input.val()) - 1;
+					count = count < 1 ? 1 : count;
+					$input.val(count);
+					$input.change();
+					return false;
+				});
+				$('.plus').click(function () {
+					var $input = $(this).parent().find('input');
+					$input.val(parseInt($input.val()) + 1);
+					$input.change();
+					return false;
+				});
+			});
+  </script>
+  <!-- Custom js for Digital clock -->
+
+<script>if (window.module) module = window.module;</script>
+</body>
+
+</html>

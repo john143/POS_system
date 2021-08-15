@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    POS- Category Master
+  </title>
+  <!-- Favicon -->
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/pos-dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/mystyle.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="./js/dev_plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidenav-main">
+    
+  </nav>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+		<div class="col-xl-8 col-sm-5 col-md-5  pull-left p-left">
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-nonex d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0 p-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <div class="media-body ml-2 d-nonex d-lg-block">
+                  <i class="ni ni-circle-08"></i> <span class="mb-0 text-sm  font-weight-bold">User Name</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>My profile</span>
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-settings-gear-65"></i>
+                <span>Settings</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0);" class="dropdown-item logout_me">
+                <i class="ni ni-user-run"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+		</div>
+		<!-- Brand -->
+		<div class="col-xl-3 col-sm-6 col-md-6  pull-right text-right">
+		<!--Search Form -->
+        <form class="navbar-search navbar-search-dark form-inline mr-3x d-none d-md-flex ml-lg-auto inlineblock keyboard-input">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+				<span class="input-group-text"><i class="fas fa-search"></i></span>
+			  </div>
+			  <input class="form-control use-keyboard-input" placeholder="Search" type="text">
+            </div>
+          </div>
+        </form>
+		</div>
+		<div class="col-xl-1 col-sm-1 col-md-1 pull-right text-right">
+			<a href="manager.html" class="btn btn-sm btn-white">Exit</a>
+		</div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-4x pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+        <div class="col-xl-12 mb-2 mb-xl-0">
+	
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-10 col-sm-4 col-md-4">
+                  <h3 class="mb-0">Category Master</h3>
+                </div>
+				<!--<div class="col-xl-6 col-sm-6 col-md-6 text-right">
+				    <form class="navbar-search navbar-search-dark form-inline d-none d-md-flex ml-lg-auto keyboard-input nomargin">
+						<div class="form-group mb-0  search-on-whitebg">
+							<div class="input-group input-group-alternative">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-search"></i></span>
+								</div>
+								<input class="form-control use-keyboard-input" placeholder="Search" type="text">
+							</div>
+						</div>
+					</form>
+                </div>-->
+				<div class="col-xl-2 col-sm-4 col-md-4 text-right">
+					<a href="add_category.html" class="btn btn-sm btn-primary">Add New Category</a>
+				</div>
+              </div>
+			  
+			<!--  <div class="row align-items-centerx">
+                <div class="col-xl-12">
+					<form role="form" method="post" id="add_category_frm">
+
+						<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Category Name</label>
+								<input class="form-control" name="cat_name" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						
+						<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Publish/Unpublish</label>
+								<select class="form-control" id="exampleFormControlSelect1" name="cat_status">
+								  <option value="1">Publish</option>
+								  <option value="0">Unpublish</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding text-left">
+							<button type="submit" class="btn btn-sm btn-primary add_cat_btn">Save</button>
+							<a href="javascript:void(0);" class="btn btn-sm btn-danger">Cancel</a>
+						</div>
+					</form>
+				
+				</div>	
+			</div>-->
+			  
+			  
+            </div>
+            <div class="table-responsive">
+			<div class="cart-holder tableContainer active-order-table">
+              <!-- Projects table -->
+              <table class="table align-items-center table-flush"  id="cart-container-id">
+                <thead class="thead-light">
+					<tr class="tablehead">
+						<th>Category Name</th>
+						<th>Category Id</th>
+						<th>Publish/Unpublish</th>
+						<th>Action</th>
+					</tr>
+                </thead>
+                <tbody id="append_cat_list">
+					
+				</tbody>
+              </table>
+			  </div>
+            </div>
+			
+
+		  
+        </div>
+        </div> 
+		
+		
+		
+      </div>
+      <!-- Footer -->
+      <footer class="footer" id="app_footer">
+        
+      </footer>
+    </div>
+  </div>
+     
+ 
+<script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <!--   Core   -->
+  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="./js/dev_plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="./js/dev_plugins/jquery-validation/additional-methods.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="./js/dev_plugins/sweetalert2/sweetalert2.min.js"></script>
+  <script src="./js/public.js"></script>
+ <script>
+ //const { ipcRenderer } = require('electron');
+
+
+    $(document).ready(function () {
+		
+	
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 8000
+      });
+
+
+      setInterval(function () {
+        if (!navigator.onLine) {
+          $('.internet_err').show();
+        } else {
+          $('.internet_err').hide();
+        }
+      }, 1000);
+	  
+	  form_data = { 'route': 'categories', 'action': 'getCategories' };
+      var cat_list = ipcRenderer.sendSync('initRoute', form_data);
+	  console.log('llllll : ' + JSON.stringify(cat_list))
+	  var n = 1;
+	  var tbl_html = cat_list.map(one_cat=>{
+			
+			if(one_cat.is_active == '1'){
+				var status = 'Publish';
+			}else{
+				var status = 'Unpublish';
+			}
+			var select_cls = '';
+			if(n % 2 != 0){
+				select_cls = 'row-selected';
+			}
+			//var result = '<tr class="cart-header '+select_cls+'"><td>'+one_cat.catname+'</td><td>'+one_cat.catid+'</td><td>'+status+'</td><td><a class="btn btn-icon btn-primary btn-sm" href="update-category.html?unique='+one_cat.catid+'"><span class="btn-inner--icon"><i class="fa fa-edit"></i></span></a><button class="btn btn-icon btn-danger btn-sm delete_cat" data-unique="'+one_cat.catid+'" type="button" ><span class="btn-inner--icon"><i class="fa fa-trash"></i></span></button></td></tr>';
+			var result = '<tr class="cart-header '+select_cls+'"><td>'+one_cat.catname+'</td><td>'+one_cat.catid+'</td><td>'+status+'</td><td><a class="btn btn-icon btn-primary btn-sm" href="update-category.html?unique='+one_cat.catid+'"><span class="btn-inner--icon"><i class="fa fa-edit"></i></span></a></td></tr>';
+			n++;
+			return result;
+		})
+		$('#append_cat_list').append(tbl_html);
+
+      $.validator.setDefaults({
+        submitHandler: function () {
+          
+          $('.add_cat_btn').attr('disabled', true);
+          var form_data = [];
+		
+		  var cat_name = $.trim($('[name="cat_name"]').val());
+          var cat_status = $.trim($('[name="cat_status"]').val());
+          form_data = { 'cat_name':cat_name, 'cat_status': cat_status, 'route': 'categories', 'action': 'addCategory' };
+          var status = ipcRenderer.sendSync('initRoute', form_data);
+          //console.log('Error : ' + JSON.stringify(status))
+          //return false;
+          if (status == '1') {
+			$("#add_category_frm").get(0).reset();
+			/*Toast.fire({
+              icon: 'success',
+              title: 'Category added successfully.'
+            })*/
+			location.reload(true);
+		  }else if(status == '2'){
+			Toast.fire({
+              icon: 'error',
+              title: 'This category is already in our database'
+            })
+          } else {
+            $('.add_cat_btn').attr('disabled', false);
+            Toast.fire({
+              icon: 'error',
+              title: 'We are getting some error. Please try after some time.'
+            })
+            return false;
+          }
+        }
+      });
+      $('#add_category_frm').validate({
+        rules: {
+			cat_name: {
+            required: true,
+          },
+		  cat_status: {
+            required: true,
+          },
+        },
+        messages: {
+		  cat_name: {
+            required: "Enter category name",
+          },
+		  cat_status: {
+            required: "Please select category status",
+          },
+
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.input-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+	  
+	  $(document).on('click', '.delete_cat',function(){
+		var conf = confirm('Are you sure you want to delete?');
+		if(conf){
+			var $_this = $(this);
+			var unique = $.trim($_this.data('unique'));
+			form_data = { 'unique':unique, 'route': 'categories', 'action': 'deleteCategory' };
+			  var status = ipcRenderer.sendSync('initRoute', form_data);
+			  //console.log('Error : ' + JSON.stringify(status))
+			  if (status == '1') {
+				
+				location.reload(true);
+			 
+			  } else {
+				Toast.fire({
+				  icon: 'error',
+				  title: 'We are getting some error. Please try after some time.'
+				})
+				return false;
+			  }
+		}else{
+			return false;
+		}
+	  })
+    });
+  
+ </script>
+
+<script>if (window.module) module = window.module;</script>
+</body>
+
+</html>

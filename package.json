@@ -1,0 +1,42 @@
+{
+  "name": "POS-System",
+  "version": "1.0.0",
+  "description": "Awesome app for all types of Live matches",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chandan Kushwaha",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.0.3",
+    "electron-wix-msi": "^3.0.4",
+    "electron-builder": "^22.10.5"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "node-machine-id": "^1.1.12",
+    "sqlite3": "^5.0.0"
+  },
+  "build": {
+    "appId": "com.PosSystem",
+    "win": {
+      "target": "nsis",
+      "icon": "build/logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/logo.ico"
+    },
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "asar": true
+  }
+}

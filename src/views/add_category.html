@@ -1,0 +1,1093 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    POS- Create Category
+  </title>
+  <!-- Favicon -->
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/pos-dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/mystyle.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="./js/dev_plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">  
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidenav-main">
+    
+  </nav>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+		<div class="col pull-left p-left">
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-nonex d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0 p-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <div class="media-body ml-2 d-nonex d-lg-block">
+                  <i class="ni ni-circle-08"></i> <span class="mb-0 text-sm  font-weight-bold">User Name</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>My profile</span>
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="ni ni-settings-gear-65"></i>
+                <span>Settings</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0);" class="dropdown-item logout_me">
+                <i class="ni ni-user-run"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+		</div>
+		<!-- Brand -->
+		<div class="col pull-right text-right">
+			<a href="manager.html" class="btn btn-sm btn-white">Exit</a>
+		</div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-4x pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+	  
+	    <div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-2">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-4 col-sm-4 col-md-4">
+                  <h3 class="mb-0">Create Category</h3>
+                </div>
+				<div class="col-xl-8 col-sm-8 col-md-8 text-right">
+					<a href="category-master.html" class="btn btn-sm btn-white">Go Back</a>
+				</div>
+              </div>
+            </div>
+		  </div>
+		</div>
+	  
+        <div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-0">
+
+			<div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-centerx">
+                <div class="col-xl-12">
+					<form method="post" id="add_category_frm">
+
+						<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Category Name</label>
+								<input class="form-control" name="cat_name" type="text" value="" placeholder="" >
+							</div>
+						</div>
+						<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding">
+							<div class="form-group focused">
+								<label for="example-text-input" class="form-control-label">Publish/Unpublish</label>
+								<select class="form-control" id="exampleFormControlSelect1" name="cat_status">
+								  <option value="1">Publish</option>
+								  <option value="0">Unpublish</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding text-right">
+							<button type="submit" class="btn btn-sm btn-primary add_cat_btn">Save</button>
+							
+							<a href="add_category.html" class="btn btn-sm btn-danger">Cancel</a>
+						</div>
+					</form>
+				
+			</div>	
+		</div>
+		  </div>
+        </div>
+        </div> 
+		
+		<div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-0">
+			<div class="card shadow">
+				<div class="card-header border-0 pt-2">
+				  <div class="row align-items-centerx">
+					<div class="pc-tab eatin-tab create-item-tab">
+						<input checked="checked" id="tab1" type="radio" name="pct" />
+						<input id="tab2" type="radio" name="pct" />
+						<input id="tab3" type="radio" name="pct" />
+						<input id="tab4" type="radio" name="pct" />
+						  <nav>
+							<ul>
+							  <li class="tab1">
+								<label for="tab1">Size/Base</label>
+							  </li>
+							  <li class="tab2">
+								<label for="tab2">Toppings</label>
+							  </li>
+							  <!--<li class="tab3">
+								<label for="tab3">Extra</label>
+							  </li> -->
+							  <!--<li class="tab4">
+								<label for="tab4">Select any (1)</label>
+							  </li>-->
+							</ul>
+						  </nav>
+						  <section>
+							<div class="tabholder tab1">
+								<div class="table-responsive">
+									<div class="cart-holder tableContainer active-order-table">
+									  <!-- Projects table -->
+									  <table class="table align-items-center table-flush"  id="cart-container-id">
+										<thead class="thead-light">
+											<tr class="tablehead">
+												<th>Size</th>
+												<th>Base</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody id="size_base">
+													
+										</tbody>
+									  </table>
+									</div>
+								</div>
+							</div>
+
+							<div class="tabholder tab2">
+							
+								<div class="card-body p-0">
+								  <!-- List group -->
+								  <ul class="list-group list-group-flush" data-toggle="checklist">
+									<li class="checklist-entry list-group-item flex-column align-items-start py-2 px-4">
+									  <div class="checklist-item checklist-item-success checklist-item-checked">
+										<div class="checklist-info">
+										  <h5 class="checklist-title mb-0">Selected Toppings 
+										  <!--<a href="#" data-toggle="modal" data-target="#edit-selected-contains-Modal"><i class="fa fa-edit"></i>(Edit)</a>-->
+										  </h5>
+										  <small class="selected_contain_str"></small>
+										</div>
+									  </div>
+									</li>
+								  </ul>
+								</div>
+								<div class="divider clear"></div>
+								<div class="alphabet-wrap">
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">A</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">B</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">C</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">D</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">E</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">F</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">G</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">H</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">I</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">J</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">K</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">L</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">M</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">N</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">O</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">P</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">Q</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">R</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">S</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">T</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">U</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">V</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">W</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">X</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">Y</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">Z</a>
+									<a href="javascript:void(0);" class="btn btn-outline-primary alpha-btn search_letter">All</a>
+								</div>
+								<div class="divider clear"></div>
+								<div id="extra-items-container">
+									<div class="row" id="toppings_contain">
+										
+									</div>
+								</div>
+							</div>
+							
+							<!--<div class="tabholder tab3">
+							
+								<div class="card-body p-0">
+								  
+								  <ul class="list-group list-group-flush" data-toggle="checklist">
+									<li class="checklist-entry list-group-item flex-column align-items-start py-2 px-4">
+									  <div class="checklist-item checklist-item-success checklist-item-checked">
+										<div class="checklist-info">
+										  <h5 class="checklist-title mb-0">Selected Extra Toppings 
+										 
+										  
+										  </h5>
+										  <small class="selected_extra_str"></small>
+										</div>
+									  </div>
+									</li>
+								  </ul>
+								</div>
+								<div class="divider clear"></div>
+								<div class="alphabet-wrap">
+									<a href="#" class="btn btn-outline-primary alpha-btn">A</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">B</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">C</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">D</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">E</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">F</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">G</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">H</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">I</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">J</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">K</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">L</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">M</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">N</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">O</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">P</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Q</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">R</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">S</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">T</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">U</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">V</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">W</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">X</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Y</a>
+									<a href="#" class="btn btn-outline-primary alpha-btn">Z</a>
+									<a href="#" class="btn btn-grd-inverse alpha-btn all">All</a>
+								</div>
+								<div class="divider clear"></div>
+								<div id="extra-items-container">
+									<div class="row" id="toppings_extra">
+										
+									</div>
+								</div>
+							</div> -->
+							<div class="tabholder tab4">
+							
+								<div class="card-body p-0">
+								  <!-- List group -->
+								  <a href="#" class="btn btn-sm btn-primary mb-2" data-toggle="modal" data-target="#add-new-to-selectany-Modal">Add New</a>
+								  <ul class="list-group list-group-flush" data-toggle="checklist">
+									<li class="checklist-entry list-group-item flex-column align-items-start py-2 px-4">
+									  <div class="checklist-item checklist-item-success checklist-item-checked">
+										<div class="checklist-info">
+										  <h5 class="checklist-title mb-0">Selected Name (1,1,mandatory)</h5>
+										  <small>Chilli Flakes, BBq sauce, corn chips</small>
+										</div>
+									  </div>
+									</li>
+								  </ul>
+								</div>
+							
+								
+							</div>
+						  </section>
+					</div>
+				  </div>
+				</div>
+			</div>			
+		</div>
+		
+      </div>
+      <!-- Footer -->
+      <footer class="footer" id="app_footer">
+        
+      </footer>
+    </div>
+  </div>
+     
+ 
+ <!--add-new-to-selectany- START-->
+<div class="modal fade" id="add-new-to-selectany-Modal" tabindex="-1" role="dialog" aria-labelledby="add-new-to-selectany-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog width90percent-modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="add-new-to-selectany-ModalLabel">Add More</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+			<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding padding-right20 mb-2">
+				<div class="col-xl-3 col-sm-3 col-md-3 pull-left nopadding  padding-right20">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Name</label>
+					<input class="form-control" type="text" value="" Placeholder="Select a bun type">
+				</div>
+				</div>
+				
+				<div class="col-xl-3 col-sm-3 col-md-3 pull-left nopadding padding-right20">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">How Many</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xl-3 col-sm-3 col-md-3 pull-left nopadding">
+				<div class="form-group focused">
+					<label for="example-text-input" class="form-control-label">Order No.</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xl-3 col-sm-3 col-md-3 pull-left nopadding">
+				<div class="custom-control custom-checkbox pt-5 ml-2">
+					<input type="checkbox" class="custom-control-input" id="mustCheck1">
+					<label class="custom-control-label form-control-label" for="mustCheck1">Must</label>
+				</div>
+				</div>
+				<div class="divider clear"></div>
+					<div class="alphabet-wrap">
+						<a href="#" class="btn btn-outline-primary alpha-btn">A</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">B</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">C</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">D</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">E</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">F</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">G</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">H</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">I</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">J</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">K</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">L</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">M</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">N</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">O</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">P</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Q</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">R</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">S</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">T</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">U</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">V</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">W</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">X</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Y</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Z</a>
+						<a href="#" class="btn btn-grd-inverse alpha-btn all">All</a>
+					</div>
+					<div class="divider clear"></div>			
+			
+			
+			<div id="extra-items-container">
+									<div class="row">
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">chilli flakes </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">bbq sauce </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">crispy </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">corn chips </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">garlic base  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">mexican salsa  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">broccoli  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">anchovies  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">basil pesto </span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+			</div>
+
+		</form>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!---add-new-to-selectany---END--> 
+ 
+ 
+<!--edit selected contains- START-->
+<div class="modal fade" id="edit-selected-contains-Modal" tabindex="-1" role="dialog" aria-labelledby="edit-selected-contains-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog width90percent-modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit-selected-contains-ModalLabel">Edit Selected</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+			<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding padding-right20 mb-2">
+					<div class="alphabet-wrap">
+						<a href="#" class="btn btn-outline-primary alpha-btn">A</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">B</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">C</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">D</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">E</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">F</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">G</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">H</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">I</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">J</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">K</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">L</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">M</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">N</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">O</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">P</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Q</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">R</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">S</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">T</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">U</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">V</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">W</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">X</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Y</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Z</a>
+						<a href="#" class="btn btn-grd-inverse alpha-btn all">All</a>
+					</div>
+					<div class="divider clear"></div>			
+			
+			
+			<div id="extra-items-container">
+									<div class="row">
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">chilli flakes </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">bbq sauce </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">crispy </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">corn chips </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">garlic base  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">mexican salsa  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">broccoli  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">anchovies  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">basil pesto </span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+			</div>
+
+		</form>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-success">Update</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!---edit selected contains---END--> 
+ <!--edit selected extra- START-->
+<div class="modal fade" id="edit-selected-extra-Modal" tabindex="-1" role="dialog" aria-labelledby="edit-selected-extra-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog width90percent-modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit-selected-extra-ModalLabel">Edit Selected</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+			<div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding padding-right20 mb-2">
+					<div class="alphabet-wrap">
+						<a href="#" class="btn btn-outline-primary alpha-btn">A</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">B</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">C</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">D</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">E</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">F</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">G</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">H</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">I</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">J</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">K</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">L</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">M</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">N</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">O</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">P</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Q</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">R</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">S</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">T</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">U</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">V</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">W</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">X</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Y</a>
+						<a href="#" class="btn btn-outline-primary alpha-btn">Z</a>
+						<a href="#" class="btn btn-grd-inverse alpha-btn all">All</a>
+					</div>
+					<div class="divider clear"></div>			
+			
+			
+			<div id="extra-items-container">
+									<div class="row">
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">chilli flakes </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">bbq sauce </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">crispy </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">corn chips </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">garlic base  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">mexican salsa  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">broccoli  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">anchovies  </span>
+												</label>
+											</div>
+										</div>
+										<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2">
+											<div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons">
+												<label class="btn btn-disable">
+												  <input type="checkbox" checked="" autocomplete="off"> 
+												  <span class="item-name">basil pesto </span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+			</div>
+
+		</form>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-success">Update</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<input type="hidden" class="is_size_checked" value="">
+<input type="hidden" class="is_base_checked" value="">
+ <!---edit selected extra---END-->
+ <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <!--   Core   -->
+  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="./js/dev_plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="./js/dev_plugins/jquery-validation/additional-methods.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="./js/dev_plugins/sweetalert2/sweetalert2.min.js"></script>
+  <script src="./js/public.js"></script>
+<script>
+$(document).ready(function () {
+		
+	
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 8000
+      });
+	
+	form_data = { 'route': 'sizeBase', 'action': 'getActiveBases' };
+    var base_list = ipcRenderer.sendSync('initRoute', form_data);
+	console.log('bases : ' + JSON.stringify(base_list))
+	if(base_list){
+		
+		
+		
+		form_data = { 'route': 'sizeBase', 'action': 'getActiveSizes' };
+		var size_list = ipcRenderer.sendSync('initRoute', form_data);
+		console.log('Size : ' + JSON.stringify(size_list))
+		var size_html = size_list.map(one_size=>{
+			var check_NS = '';
+			var default_check = '';
+			if(one_size.szname == 'NS' || one_size.szname == 'ns'){
+				check_NS = 'checked';
+			}
+			
+			var base_html = base_list.map(one_base=>{
+				var check_NB = '';
+				if(check_NS == 'checked'){
+					if(one_base.bname == 'NB' || one_size.bname == 'nb'){
+						check_NB = 'checked';
+						default_check = one_base.bid;
+					}
+				}
+				
+				var base_unique = one_size.szid+'_'+one_base.bid;
+				var result = '<td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input cmn_base base_row_'+one_size.szid+'" data-base="'+one_base.bid+'" data-size="'+one_size.szid+'" id="uniq_base_'+base_unique+'" '+check_NB+' ><label class="custom-control-label" for="uniq_base_'+base_unique+'">'+one_base.bname+'</label></div></td>';
+				return result;
+			})
+			
+			var result = '<tr class="cart-header"><td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input cmn_size" id="uniq_size_'+one_size.szid+'" data-size="'+one_size.szid+'" data-sbase="'+default_check+'" '+check_NS+' ><label class="custom-control-label" for="uniq_size_'+one_size.szid+'">'+one_size.szname+'</label></div></td>'+base_html+'</tr>';
+			return result;
+		})
+		$('#size_base').append(size_html);
+	}
+	
+	$(document).on('click', '.cmn_base',function(){
+		var $_this = $(this);
+		var base_id = $.trim($_this.data('base'));
+		var size_id = $.trim($_this.data('size'));
+		if($('#uniq_size_'+size_id).is(':checked')){
+			var sbase = '';
+			$('.base_row_'+size_id).each(function(){
+				if($(this).is(':checked')){
+					var temp_base_id = $.trim($(this).data('base'));
+					if(sbase){
+						sbase = sbase+','+temp_base_id;
+					}else{
+						sbase = temp_base_id;
+					}
+				}
+			})
+			setTimeout(function(){
+			console.log(sbase)
+				$('#uniq_size_'+size_id).data('sbase', sbase);
+			},100)
+			return true;
+		}else{
+			alert('Please check the size first');
+			return false;
+		}
+	})
+	$(document).on('click', '.cmn_size',function(){
+		var $_this = $(this);
+		var size_id = $.trim($_this.data('size'));
+		$_this.data('sbase', '');
+		if($_this.is(':checked')){
+			return true;
+		}else{
+			$('.base_row_'+size_id).each(function(){
+				$(this).prop('checked', false);
+			})
+		}
+	})
+    /*$('.testing').on('click', function(){
+		//console.log(base_html);
+			var size_base = new Array();
+			var n = 0;
+			$('.cmn_size').each(function(){
+				if($(this).is(':checked')){
+					var size_id = $.trim($(this).data('size'));
+					var base_idz = $.trim($(this).data('sbase'));
+					console.log(size_id)
+					size_base[n] = {};
+					size_base[n]['size'] = size_id;
+					size_base[n]['base'] = {base_idz};
+					n++;
+				}
+				
+			})
+			setTimeout(function(){
+				console.log('Size_base : ' + JSON.stringify(size_base))
+			},100)
+			//console.log('Size_base : ' + JSON.stringify(size_base))
+			return false;
+	})*/
+
+      $.validator.setDefaults({
+        submitHandler: function () {
+		
+			
+          
+          $('.add_cat_btn').attr('disabled', true);
+          var form_data = [];
+		
+		  var cat_name = $.trim($('[name="cat_name"]').val());
+          var cat_status = $.trim($('[name="cat_status"]').val());
+		  var size_base = get_selected_size_base();
+		  console.log('Error : ' + JSON.stringify(size_base))
+		  //return false;
+          form_data = { 'cat_name':cat_name, 'cat_status': cat_status, 'size_base':size_base, 'contain_idzs':contain_idzs, 'extra_idzs':extra_idzs, 'route': 'categories', 'action': 'addCategory' };
+          var status = ipcRenderer.sendSync('initRoute', form_data);
+          //console.log('Error : ' + JSON.stringify(status))
+          //return false;
+          if (status == '1') {
+			//$("#add_category_frm").get(0).reset();
+			/*Toast.fire({
+              icon: 'success',
+              title: 'Category added successfully.'
+            })*/
+			window.location.href = 'category-master.html';
+			//location.reload(true);
+		  }else if(status == '2'){
+			Toast.fire({
+              icon: 'error',
+              title: 'This category is already in our database'
+            })
+          } else {
+            $('.add_cat_btn').attr('disabled', false);
+            Toast.fire({
+              icon: 'error',
+              title: 'We are getting some error. Please try after some time.'
+            })
+            return false;
+          }
+        }
+      });
+      $('#add_category_frm').validate({
+        rules: {
+			cat_name: {
+            required: true,
+          },
+		  cat_status: {
+            required: true,
+          },
+        },
+        messages: {
+		  cat_name: {
+            required: "Enter category name",
+          },
+		  cat_status: {
+            required: "Please select category status",
+          },
+
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.input-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+	  
+	  form_data = { 'route': 'topping', 'action': 'getActiveToppings' };
+	  var active_toppings = ipcRenderer.sendSync('initRoute', form_data);
+	  console.log('Toppings : ' + JSON.stringify(active_toppings))
+	  var topping_html = active_toppings.map(one_topp=>{
+			var result = '<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2"><div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons"><label class="btn btn-disable contain_cmn" data-toppid="'+one_topp.tid+'" data-toppname="'+one_topp.tname+'"><input type="checkbox" class=""  autocomplete="off"><span class="item-name">'+one_topp.tname+'</span></label></div></div>';
+			return result;
+	  
+	  })
+	  var extra_html = active_toppings.map(one_topp=>{
+			var result = '<div class="col-xl-3 col-sm-3 col-md-3 pull-left mt-2"><div class="btn-group-toggle extra-item-topping-btn" data-toggle="buttons"><label class="btn btn-disable extra_cmn" data-toppid="'+one_topp.tid+'" data-toppname="'+one_topp.tname+'"><input type="checkbox" class=""  autocomplete="off"><span class="item-name">'+one_topp.tname+'</span></label></div></div>';
+			return result;
+	  
+	  })
+	  
+	  $('#toppings_contain').append(topping_html);
+	  $('#toppings_extra').append(extra_html);
+	  
+	  var selected_contain_arr = new Array();
+	  var selected_extra_arr = new Array();
+	  var contain_idz = new Array();
+	  var extra_idz = new Array();
+	  var contain_idzs = '';
+	  var extra_idzs = '';
+	  $('.contain_cmn').on('click', function(){
+			var $_this = $(this);
+			var toppid = $.trim($_this.data('toppid'));
+			var toppname = $.trim($_this.data('toppname'));
+			if(!$_this.hasClass('active')){
+				selected_contain_arr.push(toppname);
+				contain_idz.push(toppid);
+			}else{
+				const index = selected_contain_arr.indexOf(toppname);
+				const index1 = contain_idz.indexOf(toppname);
+				if (index > -1) {
+				  selected_contain_arr.splice(index, 1);
+				  contain_idz.splice(index1, 1);
+				}
+			}
+			var selected_contain_str = selected_contain_arr.toString();
+			contain_idzs = contain_idz.toString();
+			$('.selected_contain_str').text(selected_contain_str);
+			console.log(contain_idzs);
+	  })
+	  $('.extra_cmn').on('click', function(){
+			var $_this = $(this);
+			var toppid = $.trim($_this.data('toppid'));
+			var toppname = $.trim($_this.data('toppname'));
+			if(!$_this.hasClass('active')){
+				selected_extra_arr.push(toppname);
+				extra_idz.push(toppid);
+			}else{
+				const index = selected_extra_arr.indexOf(toppname);
+				const index1 = extra_idz.indexOf(toppname);
+				if (index > -1) {
+				  selected_extra_arr.splice(index, 1);
+				  extra_idz.splice(index1, 1);
+				}
+			}
+			var selected_contain_str = selected_extra_arr.toString();
+			extra_idzs = extra_idz.toString();
+			$('.selected_extra_str').text(selected_contain_str);
+			console.log(extra_idzs);
+	  })
+	  
+	  $('.search_letter').on('click', function(){
+		$('.search_letter').each(function(){
+			$(this).removeClass('active');
+		})
+		var letter = $.trim($(this).text());
+		
+		console.log(letter);
+		$('#toppings_contain').find('.extra-item-topping-btn').each(function(){
+			$_this = $(this);
+			if(letter != 'All'){
+				var s_top_name = $_this.children('.contain_cmn').children('.item-name').text();
+				console.log(s_top_name);
+				var first_ch_word = s_top_name.charAt(0);
+				
+				if(letter != first_ch_word.toUpperCase()){
+					$_this.parent('div').hide();
+				}else{
+					$_this.parent('div').show();
+				}
+			}else{
+				$_this.parent('div').show();
+			}
+			
+		})
+		$(this).addClass('active');
+	  })
+	  
+	  
+	  
+    });
+	function get_selected_size_base(){
+		var size_base = new Array();
+		var n = 0;
+		$('.cmn_size').each(function(){
+			if($(this).is(':checked')){
+				var size_id = $.trim($(this).data('size'));
+				var base_idz = $.trim($(this).data('sbase'));
+				console.log(size_id)
+				size_base[n] = {};
+				size_base[n]['size'] = size_id;
+				size_base[n]['base'] = {base_idz};
+				n++;
+			}
+			
+		})
+		/*setTimeout(function(){
+			console.log('Size_base : ' + JSON.stringify(size_base))
+		},100)*/
+		return size_base;
+			
+	}
+</script>
+  
+  
+  <script>if (window.module) module = window.module;</script>
+
+</body>
+
+</html>

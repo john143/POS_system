@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>POS- Topping Master</title>
+<!-- Favicon -->
+<link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<!-- Icons -->
+<link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+<link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- CSS Files -->
+<link href="./assets/css/pos-dashboard.css" rel="stylesheet" />
+<link href="./assets/css/mystyle.css" rel="stylesheet" />
+</head>
+<body class="">
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidenav-main">
+  
+</nav>
+<div class="main-content">
+  <!-- Navbar -->
+  <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+    <div class="container-fluid">
+      <div class="col pull-left p-left">
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-nonex d-md-flex">
+          <li class="nav-item dropdown"> <a class="nav-link pr-0 p-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="media align-items-center">
+              <div class="media-body ml-2 d-nonex d-lg-block"> <i class="ni ni-circle-08"></i> <span class="mb-0 text-sm  font-weight-bold">User Name</span> </div>
+            </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-left">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#" class="dropdown-item"> <i class="ni ni-single-02"></i> <span>My profile</span> </a> <a href="settings.html" class="dropdown-item"> <i class="ni ni-settings-gear-65"></i> <span>Settings</span> </a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0);" class="dropdown-item logout_me"> <i class="ni ni-user-run"></i> <span>Logout</span> </a></div>
+          </li>
+        </ul>
+      </div>
+      <!-- Brand -->
+      <div class="col pull-right text-right"> <a href="manager.html" class="btn btn-sm btn-white">Exit</a> </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <!-- Header -->
+  <div class="header bg-gradient-primary pb-4x pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body"> </div>
+    </div>
+  </div>
+  <div class="container-fluid mt--7">
+    <div class="row mt-5">
+      <div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-2">
+        <div class="card shadow">
+          <div class="card-header border-0">
+            <div class="row align-items-centerx">
+              <div class="col-xl-4 col-sm-4 col-md-4">
+                <h3 class="mb-0">Topping Master</h3>
+              </div>
+              <div class="col-xl-8 col-sm-8 col-md-8 text-right"> <a href="#" data-toggle="modal" data-target="#addnew-topping-Modal" class="btn btn-sm btn-primary add_new_pop">Add New</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xl-12 col-sm-12 col-md-12 mb-2 mb-xl-0">
+        <div class="card shadow">
+          <div class="card-header border-0 pt-2">
+            <div class="row align-items-centerx">
+              <div class="card-body p-0">
+                      <div class="col-xl-12 col-sm-12 col-md-12 pull-left mt-2">
+                        <div class="row align-items-centerx">
+                      <div class="col-xl-12 col-sm-12 col-md-12 mt-3">
+                        <h3 class="mb-3">Toppings List</h3>
+                      </div>
+                      <div class="col-xl-12 col-sm-12 col-md-12 mt-2 append_toppings">
+							
+                      </div>
+                       
+                    </div>
+					
+					
+					
+					<div class="clear divider"></div>
+					<h3 class="mb-0">Price</h3>
+                    <div class="card shadow mt-3">	
+                      <div class="table-responsive">
+                        <div class="cart-holder tableContainer sp-item-table-table">
+                          <!-- Projects table -->
+                          <table class="table align-items-center table-flush" id="create-sp-item-table">
+                            <thead class="thead-light">
+                              <tr class="tablehead">
+                                <th class="table-grid" style="text-align:left;">Topping</th>
+                                <th>Size</th>
+                                <th>PRICE PLUS</th>
+                                <th>PRICE DOUBLE</th>
+                                <th>PRICE HALF PLUS</th>
+                                <th>PRICE HALF DOUBLE</th>
+								<th>No Replace</th>
+                              </tr>
+                            </thead>
+                            <tbody id="unique_topp_size">
+                              
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+					
+					
+					
+					
+                      </div>
+   
+                    </div>
+					
+					
+					
+					
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" id="app_footer">
+      
+    </footer>
+  </div>
+</div>
+
+<!--Add new topping- START-->
+<div class="modal fade" id="addnew-topping-Modal" tabindex="-1" role="dialog" aria-labelledby="addnew-topping-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog width90percent-modal-dialogx width800-modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addnew-topping-ModalLabel">Add New Topping</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+      </div>
+	  <form role="form" method="post" id="add_topping_frm">
+      <div class="modal-body">
+        
+          <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding mb-2">
+				  <div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+                    <div class="form-group focused">
+                      <label for="example-text-input" class="form-control-label">Topping Name</label>
+                      <input class="form-control" name="topp_name" type="text" value="" placeholder="" >
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+                    <div class="form-group focused">
+                      <label for="example-text-input" class="form-control-label">Publish/Unpublish</label>
+                      <select class="form-control" id="exampleFormControlSelect1" name="topp_status">
+                        <option value="1">Publish</option>
+                        <option value="0">Unpublish</option>
+                      </select>
+                    </div>
+                  </div>
+				  <!--<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding mt-4">
+                    <div class="form-group focused">
+                      <button type="button" class="btn btn-success">Save</button>
+                    </div>
+                  </div>-->
+            <div class="divider clear"></div>
+            <div class="table-responsive">
+                          <div class="cart-holder tableContainer screen-height-table">
+                            <!-- Projects table -->
+                            <table class="table align-items-center table-flush"  id="size-table">
+                              <thead class="thead-light">
+                                <tr class="tablehead">
+                                  <th>Size</th>
+                                  <th>Price Plus</th>
+                                  <th>Price Double</th>
+                                  <th>Price Half Plus</th>
+                                  <th>Price Half Double</th>
+                                </tr>
+                              </thead>
+                              <tbody id="append_add_size">
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+          </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success add_topp_btn">Save</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+	  </form>
+    </div>
+  </div>
+</div>
+<!---Add new Topping---END-->
+<div class="modal fade" id="update-topping-Modal" tabindex="-1" role="dialog" aria-labelledby="addnew-topping-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog width90percent-modal-dialogx width800-modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addnew-topping-ModalLabel">Update Topping</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+      </div>
+	  <form role="form" method="post" id="update_topping_frm">
+      <div class="modal-body">
+        
+          <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding mb-2">
+				  <div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+                    <div class="form-group focused">
+                      <label for="example-text-input" class="form-control-label">Topping Name</label>
+                      <input class="form-control up_topp_name" name="topp_name" type="text" value="" placeholder="" >
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding padding-right20">
+                    <div class="form-group focused">
+                      <label for="example-text-input" class="form-control-label">Publish/Unpublish</label>
+                      <select class="form-control up_topp_status" id="exampleFormControlSelect1" name="topp_status">
+                        <option value="1">Publish</option>
+                        <option value="0">Unpublish</option>
+                      </select>
+                    </div>
+                  </div>
+				  <!--<div class="col-xl-4 col-sm-4 col-md-4 pull-left nopadding mt-4">
+                    <div class="form-group focused">
+                      <button type="button" class="btn btn-success">Save</button>
+                    </div>
+                  </div>-->
+            <div class="divider clear"></div>
+            <div class="table-responsive">
+                          <div class="cart-holder tableContainer screen-height-table">
+                            <!-- Projects table -->
+                            <table class="table align-items-center table-flush"  id="size-table">
+                              <thead class="thead-light">
+                                <tr class="tablehead">
+                                  <th>Size</th>
+                                  <th>Price Plus</th>
+                                  <th>Price Double</th>
+                                  <th>Price Half Plus</th>
+                                  <th>Price Half Double</th>
+                                </tr>
+                              </thead>
+                              <tbody id="append_update_size">
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+          </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success update_topp_btn" data-unique="" data-upflag="0">Update</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+      </div>
+	  </form>
+    </div>
+  </div>
+</div>
+<!--   Core   -->
+<script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+<script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+<script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/dev_plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="./js/dev_plugins/jquery-validation/additional-methods.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="./js/dev_plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="./js/public.js"></script>
+<script>
+ //const { ipcRenderer } = require('electron');
+
+
+    $(document).ready(function () {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 8000
+      });
+	  
+	  
+	form_data = { 'route': 'topping', 'action': 'getToppings' };
+	var topping_list = ipcRenderer.sendSync('initRoute', form_data);
+	//console.log('Size : ' + JSON.stringify(topping_list))
+	var topping_html = topping_list.map(one_size=>{
+		
+		var result = '<div class="form-check form-check-inline" style="width:20%"><input class="form-check-input cmn_topp_check" type="radio" name="location_face" id="topping_'+one_size.tid+'" value="'+one_size.tid+'" ><label class="form-check-label" for="topping_'+one_size.tid+'">'+one_size.tname+' <a href="javascript:void(0);" class="open_edit_pop" data-toggle="modal" data-target="#update-topping-Modal" data-toppid="'+one_size.tid+'" data-toppname="'+one_size.tname+'" data-status="'+one_size.is_active+'"><i class="fas fa-edit"></i></a></label></div>';
+		
+		return result;
+	})
+	$('.append_toppings').append(topping_html);
+	
+	form_data = { 'route': 'sizeBase', 'action': 'getActiveSizes' };
+    var size_list = ipcRenderer.sendSync('initRoute', form_data);
+	console.log('Size : ' + JSON.stringify(size_list))
+	
+	var sz_pop_html = size_list.map(one_sz=>{
+		
+		var result = '<tr class="cart-header"><td>'+one_sz.szname+'</td><td><input type="text" class="form-control cmn_p_plus cmn_row_'+one_sz.szid+' p_plus_'+one_sz.szid+'" placeholder="" data-szid="'+one_sz.szid+'"></td><td><input type="text" class="form-control cmn_row_'+one_sz.szid+'  p_double_'+one_sz.szid+'" placeholder=""></td><td><input type="text" class="form-control cmn_row_'+one_sz.szid+' p_h_plus_'+one_sz.szid+'" placeholder=""></td><td><input type="text" class="form-control cmn_row_'+one_sz.szid+'  p_h_double_'+one_sz.szid+'" placeholder=""></td></tr>';
+		
+		return result;
+	})
+	$('#append_add_size').append(sz_pop_html);
+	$('#append_update_size').append(sz_pop_html);
+	
+	$('.cmn_topp_check').on('click', function(){
+		$('#unique_topp_size').html('');
+		var topp_id = $.trim($(this).val());
+		var topping_name = $.trim($(this).next('label').text());
+		form_data = { 'route': 'topping', 'action': 'getToppingInfo', 'toppid':topp_id };
+		var topp_info = ipcRenderer.sendSync('initRoute', form_data);
+		console.log('Size : ' + JSON.stringify(topp_info))
+		
+		var topp_info_html = topp_info.map(one_info=>{
+			
+			var result = '<tr class="cart-header"><td style="text-align:left;">'+topping_name+'</td><td class="temp_sz" data-size="'+one_info.szid+'"></td><td>$'+parseFloat(one_info.p_plus).toFixed(2)+'</td><td><span>$'+one_info.p_double+'</span></td><td><span>$'+one_info.p_h_plus+'</span></td><td><span>$'+one_info.p_h_double+'</span></td><td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="sz_check_'+one_info.id+'"><label class="custom-control-label" for="sz_check_'+one_info.id+'">&nbsp;</label></div></td></tr>';
+			
+			return result;
+		})
+		$('#unique_topp_size').append(topp_info_html);
+		
+		$('.temp_sz').each(function(){
+			var $_this = $(this);
+			var size_id = $.trim($_this.data('size'));
+			size_list.map(temp_sz=>{
+				if(temp_sz.szid == size_id){
+					$_this.text(temp_sz.szname);
+				}
+			})
+		})
+		
+	})
+	
+	$('.add_new_pop').on('click', function(){
+		$('#append_add_size').find('input').each(function(){
+			$(this).val('');
+		})
+	  })
+	$('.cmn_p_plus').on('keyup', function(){
+			var $_this = $(this);
+			var cmn_p_plus = parseFloat($.trim($_this.val()));
+			var size_id = $.trim($_this.data('szid'));
+			if(cmn_p_plus != '' && !isNaN(cmn_p_plus)){
+				var price_double = parseFloat(cmn_p_plus * 2).toFixed(2);
+				var p_h_plus = parseFloat(cmn_p_plus/2).toFixed(2);
+				var p_h_double = parseFloat(cmn_p_plus).toFixed(2);
+			}else{
+				var price_double = '';
+				var p_h_plus = '';
+				var p_h_double = '';
+				$_this.val('');
+				console.log('skjdksjdk');
+			}
+			
+			$('.p_double_'+size_id).val(price_double);
+			$('.p_h_plus_'+size_id).val(p_h_plus);
+			$('.p_h_double_'+size_id).val(p_h_double);
+	  })
+
+      $.validator.setDefaults({
+        submitHandler: function () {
+          
+          $('.add_topp_btn').attr('disabled', true);
+          var form_data = [];
+		
+		  var topp_name = $.trim($('[name="topp_name"]').val());
+		  var topp_status = $.trim($('[name="topp_status"]').val());
+		  var size_price = get_size_price();
+		  console.log('sdererer : ' + JSON.stringify(size_price))
+		  //return false;
+          form_data = { 'topp_name':topp_name,'topp_status':topp_status,'size_price':size_price, 'route': 'topping', 'action': 'addTopping' };
+          var status = ipcRenderer.sendSync('initRoute', form_data);
+          console.log('Error : ' + JSON.stringify(status))
+          //return false;
+          if (status == '1') {
+			$("#add_topping_frm").get(0).reset();
+			/*Toast.fire({
+              icon: 'success',
+              title: 'Category added successfully.'
+            })*/
+			location.reload(true);
+		  }else if(status == '2'){
+			Toast.fire({
+              icon: 'error',
+              title: 'This topping is already in our database'
+            })
+          } else {
+            $('.add_topp_btn').attr('disabled', false);
+            Toast.fire({
+              icon: 'error',
+              title: 'We are getting some error. Please try after some time.'
+            })
+            return false;
+          }
+        }
+      });
+	  
+      $('#add_topping_frm').validate({
+        rules: {
+			topp_name: {
+            required: true,
+          }
+        },
+        messages: {
+		  topp_name: {
+            required: "Enter topping name",
+          }
+
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.input-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+	  
+	  /******************Update topping**************************/
+	  $('#append_update_size').find('input').on('keyup',function(){
+			$('.update_topp_btn').data('upflag', 1);
+	  })
+	  $('.open_edit_pop').on('click', function(){
+		var toppid = $.trim($(this).data('toppid'));
+		var toppname = $.trim($(this).data('toppname'));
+		var status = $.trim($(this).data('status'));
+		
+		$('#append_update_size').find('input').each(function(){
+			$(this).val('');
+		})
+		
+		$('.up_topp_name').val(toppname);
+		$('.up_topp_status').val(status);
+		$('.update_topp_btn').data('unique',toppid);
+		
+		form_data = { 'route': 'topping', 'action': 'getToppingInfo', 'toppid':toppid };
+		var topp_info = ipcRenderer.sendSync('initRoute', form_data);
+		
+		console.log('topp_info : ' + JSON.stringify(topp_info))
+		topp_info.map(one_info=>{
+			var size_id = one_info.szid;
+			$('.p_plus_'+size_id).val(one_info.p_plus);
+			$('.p_double_'+size_id).val(one_info.p_double);
+			$('.p_h_plus_'+size_id).val(one_info.p_h_plus);
+			$('.p_h_double_'+size_id).val(one_info.p_h_double);
+		})
+	})
+	  $.validator.setDefaults({
+        submitHandler: function () {
+          
+          $('.update_topp_btn').attr('disabled', true);
+          var form_data = [];
+		
+		  var topp_name = $.trim($('.up_topp_name').val());
+		  var topp_status = $.trim($('.up_topp_status').val());
+		  var upflag = $.trim($('.update_topp_btn').data('upflag'));
+		  var unique = $.trim($('.update_topp_btn').data('unique'));
+		
+		  var size_price = get_up_size_price();
+		  console.log('upp : ' + JSON.stringify(size_price))
+		  //return false;
+          form_data = { 'topp_name':topp_name,'topp_status':topp_status,'size_price':size_price, 'upflag':upflag,'unique':unique, 'route': 'topping', 'action': 'updateTopping' };
+          var status = ipcRenderer.sendSync('initRoute', form_data);
+          console.log('Error : ' + JSON.stringify(status))
+          //return false;
+          if (status == '1') {
+			$("#add_topping_frm").get(0).reset();
+			/*Toast.fire({
+              icon: 'success',
+              title: 'Category added successfully.'
+            })*/
+			location.reload(true);
+		  }else if(status == '2'){
+			Toast.fire({
+              icon: 'error',
+              title: 'This topping is already in our database'
+            })
+          } else {
+            $('.update_topp_btn').attr('disabled', false);
+            Toast.fire({
+              icon: 'error',
+              title: 'We are getting some error. Please try after some time.'
+            })
+            return false;
+          }
+        }
+      });
+	  
+      $('#update_topping_frm').validate({
+        rules: {
+			topp_name: {
+            required: true,
+          }
+        },
+        messages: {
+		  topp_name: {
+            required: "Enter topping name",
+          }
+
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.input-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+	  
+    });
+  function get_size_price(){
+		var size_base = new Array();
+		var n = 0;
+		$('#append_add_size').find('.cmn_p_plus').each(function(){
+			var this_each = $(this);
+			var p_plus = $.trim(this_each.val());
+			if(p_plus){
+				var size_id = $.trim(this_each.data('szid'));
+				console.log(size_id)
+				size_base[n] = {};
+				size_base[n]['size'] = size_id;
+				size_base[n]['p_plus'] = p_plus;
+				size_base[n]['p_double'] = $.trim($('#append_add_size').find('.p_double_'+size_id).val());
+				size_base[n]['p_h_plus'] = $.trim($('#append_add_size').find('.p_h_plus_'+size_id).val());
+				size_base[n]['p_h_double'] = $.trim($('#append_add_size').find('.p_h_double_'+size_id).val());
+				n++;
+			}
+			
+		})
+		/*setTimeout(function(){
+			console.log('Size_base : ' + JSON.stringify(size_base))
+		},100)*/
+		return size_base;
+			
+	}
+	function get_up_size_price(){
+		var size_base = new Array();
+		var n = 0;
+		$('#append_update_size').find('.cmn_p_plus').each(function(){
+			var this_each = $(this);
+			var p_plus = $.trim(this_each.val());
+			if(p_plus){
+				var size_id = $.trim(this_each.data('szid'));
+				console.log(size_id)
+				size_base[n] = {};
+				size_base[n]['size'] = size_id;
+				size_base[n]['p_plus'] = p_plus;
+				size_base[n]['p_double'] = $.trim($('#append_update_size').find('.p_double_'+size_id).val());
+				size_base[n]['p_h_plus'] = $.trim($('#append_update_size').find('.p_h_plus_'+size_id).val());
+				size_base[n]['p_h_double'] = $.trim($('#append_update_size').find('.p_h_double_'+size_id).val());
+				n++;
+			}
+			
+		})
+		/*setTimeout(function(){
+			console.log('Size_base : ' + JSON.stringify(size_base))
+		},100)*/
+		return size_base;
+			
+	}
+ </script>
+
+
+<script>if (window.module) module = window.module;</script>
+
+
+</body>
+</html>

@@ -63,7 +63,11 @@
               <div class="col-xl-4  col-sm-4 col-md-4">
                 <h3 class="mb-0">Create Item</h3>
               </div>
-              <div class="col-xl-8 col-sm-8 col-md-8 text-right"> <a href="item-master.html" class="btn btn-sm btn-white">Go Back</a> <a href="#" class="btn btn-sm btn-primary">Save</a> <a href="item-master.html" class="btn btn-sm btn-danger">Cancel</a> </div>
+              <div class="col-xl-8 col-sm-8 col-md-8 text-right"> 
+				  <a href="item-master.html" class="btn btn-sm btn-white">Go Back</a> 
+				  <!--<button type="sumbit" class="btn btn-sm btn-primary save_item_btn">Save</button> -->
+				  <a href="item-master.html" class="btn btn-sm btn-danger">Cancel</a> 
+			  </div>
             </div>
           </div>
         </div>
@@ -73,31 +77,31 @@
           <div class="card-header border-0">
             <div class="row align-items-centerx">
               <div class="col-xl-12">
-                <form>
+                <form method="post" id="add_item_frm">
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding  padding-right20">
                     <div class="form-group focused">
 						<label for="example-text-input" class="form-control-label">Select Categories</label>
-						<select class="form-control" id="category_opt">
+						<select class="form-control required" id="category_opt" name="cat_id">
 							<option>--Select Category--</option>
 						</select>
 					</div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
                     <div class="form-group focused">
-                      <label for="example-text-input" class="form-control-label">Item Code</label>
-                      <input class="form-control" type="text" value="" placeholder="" >
+                      <label for="example-text-input" class="form-control-label">Item Code(Optional)</label>
+                      <input class="form-control" type="text" value="" placeholder="" name="item_code">
                     </div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Item Name</label>
-                      <input class="form-control" type="text" value="" placeholder="" >
+                      <input class="form-control required" type="text" value="" placeholder="" name="item_name">
                     </div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Publish/Unpublish</label>
-                      <select class="form-control" id="exampleFormControlSelect1">
+                      <select class="form-control required" id="exampleFormControlSelect1" name="status">
                         <option>Publish</option>
                         <option>Unpublish</option>
                       </select>
@@ -106,44 +110,44 @@
                  <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Pick up Price</label>
-                      <input class="form-control" type="text" value="" placeholder="" >
+                      <input class="form-control number required" type="text" value="" placeholder="" name="pick_up_price">
                     </div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Delivery Price</label>
-                      <input class="form-control" type="text" value="" placeholder="" >
+                      <input class="form-control number required" type="text" value="" placeholder="" name="delivery_price">
                     </div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Eat-In Price</label>
-                      <input class="form-control" type="text" value="" placeholder="" >
+                      <input class="form-control number required" type="text" value="" placeholder="" name="eat_in_price">
                     </div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Cost Price</label>
-                      <input class="form-control" type="text" value="" placeholder="" >
+                      <input class="form-control number required" type="text" value="" placeholder="" name="cost_price">
                     </div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Stock</label>
-                      <input class="form-control" type="text" value="" placeholder="" >
+                      <input class="form-control number required" type="text" value="" placeholder="" name="stock">
                     </div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Min. Stock</label>
-                      <input class="form-control" type="text" value="" placeholder="" >
+                      <input class="form-control number required" type="text" value="" placeholder="" name="min_stock">
                     </div>
                   </div>
                   <div class="col-xl-3 col-sm-4 col-md-4 pull-left nopadding padding-right20">
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Add Photo</label>
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFileLang" lang="en">
+                        <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="item_img">
                         <label class="custom-file-label" for="customFileLang"></label>
                       </div>
                     </div>
@@ -152,7 +156,7 @@
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Barcode</label>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2" name="item_bar_code">
                         <div class="input-group-append">
                           <button class="btn btn-outline-primary" type="button" id="button-addon2">Generate</button>
                         </div>
@@ -161,10 +165,14 @@
                   </div>
                   <div class="col-xl-12 col-sm-12 col-md-12 pull-left nopadding">
                     <div class="form-group focused">
-                      <label for="example-text-input" class="form-control-label">Description</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                      <label for="example-text-input" class="form-control-label">Description(Optional)</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="item_description"></textarea>
                     </div>
                   </div>
+				  <div class="form-group text-right"> 
+					  <button type="sumbit" class="btn btn-sm btn-primary save_item_btn">Save</button> 
+					  <a href="item-master.html" class="btn btn-sm btn-danger">Cancel</a> 
+				  </div>
                 </form>
               </div>
             </div>
@@ -931,6 +939,76 @@ $(document).ready(function () {
         position: 'top-end',
         showConfirmButton: false,
         timer: 4000
+      });
+	  $.validator.setDefaults({
+        submitHandler: function () {
+		
+			
+          
+          $('.add_cat_btn').attr('disabled', true);
+          var form_data = [];
+		
+		  var cat_name = $.trim($('[name="cat_name"]').val());
+          var cat_status = $.trim($('[name="cat_status"]').val());
+		  var size_base = get_selected_size_base();
+		  console.log('Error : ' + JSON.stringify(size_base))
+		  //return false;
+          form_data = { 'cat_name':cat_name, 'cat_status': cat_status, 'size_base':size_base, 'contain_idzs':contain_idzs, 'extra_idzs':extra_idzs, 'route': 'categories', 'action': 'addCategory' };
+          var status = ipcRenderer.sendSync('initRoute', form_data);
+          //console.log('Error : ' + JSON.stringify(status))
+          //return false;
+          if (status == '1') {
+			//$("#add_category_frm").get(0).reset();
+			/*Toast.fire({
+              icon: 'success',
+              title: 'Category added successfully.'
+            })*/
+			window.location.href = 'category-master.html';
+			//location.reload(true);
+		  }else if(status == '2'){
+			Toast.fire({
+              icon: 'error',
+              title: 'This category is already in our database'
+            })
+          } else {
+            $('.add_cat_btn').attr('disabled', false);
+            Toast.fire({
+              icon: 'error',
+              title: 'We are getting some error. Please try after some time.'
+            })
+            return false;
+          }
+        }
+      });
+      $('#add_item_frm').validate({
+        rules: {
+			cat_id: {
+            required: true,
+          },
+		  item_name: {
+            required: true,
+          },
+        },
+        messages: {
+		  cat_id: {
+            required: "Please select category",
+          },
+		  item_name: {
+            required: "Please enter item name",
+          },
+
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.input-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
       });
 	  
 	var form_data = { 'route': 'categories', 'action': 'getActiveCategories' };

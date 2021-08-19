@@ -102,8 +102,8 @@
                     <div class="form-group focused">
                       <label for="example-text-input" class="form-control-label">Publish/Unpublish</label>
                       <select class="form-control required" id="exampleFormControlSelect1" name="status">
-                        <option>Publish</option>
-                        <option>Unpublish</option>
+                        <option value="1">Publish</option>
+                        <option value="0">Unpublish</option>
                       </select>
                     </div>
                   </div>
@@ -945,17 +945,25 @@ $(document).ready(function () {
 		
 			
           
-          $('.add_cat_btn').attr('disabled', true);
+          $('.save_item_btn').attr('disabled', true);
           var form_data = [];
 		
-		  var cat_name = $.trim($('[name="cat_name"]').val());
-          var cat_status = $.trim($('[name="cat_status"]').val());
-		  var size_base = get_selected_size_base();
-		  console.log('Error : ' + JSON.stringify(size_base))
-		  //return false;
-          form_data = { 'cat_name':cat_name, 'cat_status': cat_status, 'size_base':size_base, 'contain_idzs':contain_idzs, 'extra_idzs':extra_idzs, 'route': 'categories', 'action': 'addCategory' };
+		  var cat_id = $.trim($('[name="cat_id"]').val());
+          var status = $.trim($('[name="status"]').val());
+		  var code = $.trim($('[name="item_code"]').val());
+		  var item_name = $.trim($('[name="item_name"]').val());
+		  var pick_up_price = $.trim($('[name="pick_up_price"]').val());
+		  var delivery_price = $.trim($('[name="delivery_price"]').val());
+		  var eat_in_price = $.trim($('[name="eat_in_price"]').val());
+		  var cost_price = $.trim($('[name="cost_price"]').val());
+		  var stock = $.trim($('[name="stock"]').val());
+		  var min_stock = $.trim($('[name="min_stock"]').val());
+		  var desc = $.trim($('[name="item_description"]').val());
+		  
+		  
+          form_data = { 'cat_id':cat_id, 'status': status, 'code':code, 'item_name':item_name, 'pick_up_price':pick_up_price,'delivery_price':delivery_price,'eat_in_price':eat_in_price,'cost_price':cost_price,'stock':stock,'min_stock':min_stock,'desc':desc, 'contain_idzs':contain_idzs, 'extra_idzs':extra_idzs,'route': 'items', 'action': 'addItem' };
           var status = ipcRenderer.sendSync('initRoute', form_data);
-          //console.log('Error : ' + JSON.stringify(status))
+          console.log('Error : ' + JSON.stringify(status))
           //return false;
           if (status == '1') {
 			//$("#add_category_frm").get(0).reset();
@@ -963,7 +971,7 @@ $(document).ready(function () {
               icon: 'success',
               title: 'Category added successfully.'
             })*/
-			window.location.href = 'category-master.html';
+			window.location.href = 'item-master.html';
 			//location.reload(true);
 		  }else if(status == '2'){
 			Toast.fire({
@@ -1061,6 +1069,7 @@ $(document).ready(function () {
 	  
 	  var contain_idzs = '';
 	  var extra_idzs = '';
+	  var anyone_idzs = '';
 	  $(document).on('click','.contain_cmn', function(){
 			var $_this = $(this);
 			var toppid = $.trim($_this.data('toppid'));
@@ -1162,9 +1171,9 @@ $(document).ready(function () {
 			$('.select_error').text('Please select a topping').show();
 			return false;
 		}else{
-			
+			var anyone_idzs = anyone_idz.toString();
 			var selected_anyone_str = selected_anyone_arr.toString();
-			var temp_html = '<li class="checklist-entry list-group-item flex-column align-items-start py-2 px-4"><div class="checklist-item checklist-item-success checklist-item-checked"><div class="checklist-info"><h5 class="checklist-title mb-0">'+select_name+' <a href="#" data-toggle="modal" data-target="#edit-selectany-Modal"><i class="fa fa-edit"></i>(Remove)</a></h5><small>'+selected_anyone_str+'</small> </div></div></li>';
+			var temp_html = '<li class="checklist-entry list-group-item flex-column align-items-start py-2 px-4"><div class="checklist-item checklist-item-success checklist-item-checked"><div class="checklist-info"><h5 class="checklist-title mb-0">'+select_name+' <a href="javascript:void(0);" class="cmn_selected" data-topidz="'+anyone_idzs+'" data-toggle="modal" data-target="#edit-selectany-Modal"><i class="fa fa-edit"></i></a> | <a href="javascript:void(0);" class="delete_selected" data-topidz="'+anyone_idzs+'">Remove</a></h5><small>'+selected_anyone_str+'</small> </div></div></li>';
 			$('#add-new-to-selectany-Modal').modal('toggle');
 			$('.append_selected_any').append(temp_html);
 			
@@ -1172,8 +1181,18 @@ $(document).ready(function () {
 			$('.anyone_cmn').each(function(){
 				$(this).removeClass('active');
 			})
+			
 			selected_anyone_arr = new Array();
 			anyone_idz = new Array();
+		}
+	})
+	
+	$(document).on('click','.delete_selected',function(){
+		var conf = confirm('Are you sure you want to delete?');
+		if(conf){
+			$(this).parent('h5').parent('div').parent('div').parent('li').remove();
+		}else{
+			return false;
 		}
 	})
 })

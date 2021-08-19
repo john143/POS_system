@@ -125,27 +125,17 @@
 						<th>Category</th>
 						<th>Item Name</th>
 						<th>Item Id</th>
-						<th>Barcode</th>
 						<th>Pickup Price</th>
 						<th>Delivery Price</th>
 						<th>Eat in Price</th>
 						<th>Cost Price</th>
-						<th>Stock</th>
-						<th>Min Stock</th>
-						<th>Photo</th>
 						<th>Publish/Unpublish</th>
-						<th>Description</th>
 						<th>Action</th>
 					</tr>
                 </thead>
-                <tbody>
-					<tr class="cart-header row-selected">
+                <tbody id="append_items">
+					 <!--<tr class="cart-header row-selected">
 						<td>Pizza</td>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
 						<td>-</td>
 						<td>-</td>
 						<td>-</td>
@@ -163,7 +153,7 @@
 						</td>
 					</tr>
 					
-					  <tr class="cart-header">
+					 <tr class="cart-header">
 						<td>Pizza</td>
 						<td>-</td>
 						<td>-</td>
@@ -185,7 +175,7 @@
 								<span class="btn-inner--icon"><i class="fa fa-trash"></i></span>
 							</button>
 						</td>
-					</tr>
+					</tr>-->
 					</tbody>
               </table>
 			  </div>
@@ -205,96 +195,51 @@
       </footer>
     </div>
   </div>
-     
-
-
- <!--create-deal-Modal START-->
-<div class="modal fade" id="create-deal-Modal" tabindex="-1" role="dialog" aria-labelledby="create-deal-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="create-deal-ModalLabel">Create Deal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-
-			<div class="col-xl-6 col-sm-6 col-md-6  pull-left nopadding  padding-right20">
-				<div class="form-group focused">
-					<label for="example-text-input" class="form-control-label">Deal Name</label>
-					<input class="form-control" type="text" value="" placeholder="" >
-				</div>
-			</div>
-			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
-				<div class="form-group focused">
-					<label for="example-text-input" class="form-control-label">Total Value</label>
-					<input class="form-control" type="text" value="" placeholder="" >
-				</div>
-			</div>
-			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding  padding-right20">
-				<div class="form-group focused">
-					<label for="example-text-input" class="form-control-label">Deal Price</label>
-					<input class="form-control" type="text" value="" placeholder="" >
-				</div>
-			</div>
-			<div class="col-xl-6 col-sm-6 col-md-6 pull-left nopadding">
-				<div class="form-group focused">
-					<label for="example-text-input" class="form-control-label">Discount</label>
-					<input class="form-control" type="text" value="" placeholder="" >
-				</div>
-			</div>
-			
-			
-			
-		</form>
-      </div>
-      <div class="modal-footer">
-		<button type="button" class="btn btn-success">Save</button>
-        <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
- <!---create-deal-END--> 
-<!-- Preperation time-  Modal -->
-<div class="modal fade" id="preperation-time-Modal" tabindex="-1" role="dialog" aria-labelledby="preperation-time-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="preperation-time-ModalLabel">Preperation Time</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="col-xl-6 pull-left nopadding  padding-right20">
-			<form>
-				<label for="DeliveryTime" class="form-control-label">Delivery Time</label>
-				<input  class="form-control" type="text" id="timePicker" placeholder="Preperation time">
-			</form>
-		</div>
-		<div class="col-xl-6 pull-left nopadding">
-			<form>
-				<label for="PickUpTime" class="form-control-label">Pick Up Time</label>
-				<input  class="form-control" type="text" id="timePicker-pickup" placeholder="Preperation time">
-			</form>
-		</div>
-      </div>
-	  <div class="modal-footer">
-            <a href="#.html" class="btn btn-success">Ok</a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Preperation time- Modal end-->   
+ 
  <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
   <!--   Core   -->
   <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
   <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/public.js"></script>
+  <script>
+  $(document).ready(function(){
   
+	form_data = { 'route': 'categories', 'action': 'getCategories' };
+	var cat_list = ipcRenderer.sendSync('initRoute', form_data);
+	console.log('llllll : ' + JSON.stringify(cat_list))
+	
+	var form_data = { 'route': 'items', 'action': 'getItems' };
+    var item_list = ipcRenderer.sendSync('initRoute', form_data);
+	console.log('act cat : ' + JSON.stringify(item_list))
+	var cal_list = item_list.map(one_item=>{
+			var category_name = '';
+			cat_list.map(one_cat=>{
+				if(one_cat.catid == one_item.cat_id){
+					category_name = one_cat.catname;
+				}
+			})
+			if(one_item.status == '1'){
+				var status = 'Publish';
+			}else{
+				var status = 'Unpublish';
+			}
+			//var result = '<option value="'+one_cat.catid+'">'+one_cat.catname+'</option>';
+			var result = '<tr class="cart-header"><td>'+category_name+'</td><td>'+one_item.name+'</td><td>'+one_item.tid+'</td><td>'+one_item.pickup_price+'</td><td>'+one_item.delivery_price+'</td><td>'+one_item.eat_in_price+'</td><td>'+one_item.cost_price+'</td><td>'+status+'</td><td><a class="btn btn-icon btn-primary btn-sm" href="edit_item"><span class="btn-inner--icon"><i class="fa fa-edit"></i></span></a><button class="btn btn-icon btn-danger btn-sm delete_item" type="button" data-tid="'+one_item.tid+'"><span class="btn-inner--icon"><i class="fa fa-trash"></i></span></button></td></tr>';
+			return result;
+	})
+	$('#append_items').append(cal_list);
+	
+	$('.delete_item').on('click', function(){
+		var conf = confirm('Are you sure you want to delete?');
+		if(conf){
+			var item_id = $.trim($(this).data('tid'));
+			console.log(item_id);
+		}else{
+			return false;
+		}
+	})
+  })
+  </script>
   <script>if (window.module) module = window.module;</script>
 
 </body>

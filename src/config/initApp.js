@@ -58,6 +58,10 @@ function createDB() {
 
 		db.run("CREATE TABLE IF NOT EXISTS item_mast (tid INTEGER PRIMARY KEY AUTOINCREMENT,itemid TEXT, itemnm TEXT,detail TEXT,photo TEXT,cstatus INT DEFAULT 1,uent_dt TEXT,is_own_pizza INT DEFAULT 0,is_half_pizza	INT DEFAULT 0,item_flag INT DEFAULT 0,base_default TEXT,unit TEXT,slug TEXT,itmtxt TEXT,barcode TEXT,sqty INT, is_special INT DEFAULT 0, min_stock_qty INT DEFAULT 0, item_stime TEXT, item_etime TEXT, attrids TEXT, deactive_dt TEXT)");
 
+		db.run("CREATE TABLE IF NOT EXISTS item_master (tid INTEGER PRIMARY KEY AUTOINCREMENT,cat_id TEXT,code TEXT, name TEXT,status INT DEFAULT 1,pickup_price TEXT,delivery_price TEXT,eat_in_price TEXT,cost_price TEXT,stock TEXT,min_stock TEXT,item_img TEXT,bar_code TEXT,desc TEXT,contain TEXT,extra TEXT, created_at TEXT, deactive_dt TEXT)");
+
+		db.run("CREATE TABLE IF NOT EXISTS item_any (id INTEGER PRIMARY KEY AUTOINCREMENT,itemid INT,name TEXT, how_many INT, order_num INT, is_must INT DEFAULT 0, topp_idz TEXT, created_at TEXT)");
+
 		db.run("CREATE TABLE IF NOT EXISTS topping_mast (tid INTEGER PRIMARY KEY AUTOINCREMENT,tname TEXT,is_active INT, uentdt TEXT)");
 		db.run("CREATE TABLE IF NOT EXISTS topping_info (id INTEGER PRIMARY KEY AUTOINCREMENT,topp_id INT,szid INT, p_plus TEXT, p_double TEXT, p_h_plus TEXT, p_h_double TEXT, created_at TEXT)");
 

@@ -3,6 +3,7 @@ var users = require('./usersController.js');
 var Category = require('./categoriesController.js');
 var SizeBase = require('./sizebaseController.js');
 var Topping = require('./toppingsController.js');
+var Items = require('./itemsController.js');
 module.exports = {
 	  getRoute: (arg, callback) => {
 			console.log('In Route: '+ JSON.stringify(arg));
@@ -136,8 +137,17 @@ module.exports = {
 						});
 					}
 				break;
-			  case 5:
-				day = "Friday";
+			  case 'items':
+					var itemObj = new Items();
+					if(arg.action == 'addItem'){
+						itemObj.addItem(arg, function(back){
+							callback(back);
+						});
+					}else if(arg.action == 'getItems'){
+						itemObj.getItems(arg, function(back){
+							callback(back);
+						});
+					}
 				break;
 			  case 6:
 				day = "Saturday";
